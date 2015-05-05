@@ -44,7 +44,7 @@ extern Int_t L_MAX;
 extern Int_t ITERATIONS;
 extern Int_t SOLUTIONS;
 extern Double_t PENALTY[4];
-extern Double_t WEIGHT[5];
+extern Double_t WEIGHT[9];
 extern Double_t SCALING;
 extern Double_t VARIATION[2];
 extern Double_t MIN_ENERGY;
@@ -80,6 +80,28 @@ inline void Swap(Int_t* a, Int_t* b)
   tmp = *a;
   *a = *b;
   *b = tmp;
+}
+
+//-----------------------------------------------------------------------------
+
+inline void Swap(Bool_t* a, Bool_t* b)
+{
+  Bool_t tmp;
+
+  tmp = *a;
+  *a = *b;
+  *b = tmp;
+}
+
+//-----------------------------------------------------------------------------
+
+inline void Swap(Char_t* a, Char_t* b)
+{
+  Char_t tmp[256];
+
+  strcpy(tmp, a);
+  strcpy(a, b);
+  strcpy(b, tmp);
 }
 
 //-----------------------------------------------------------------------------

@@ -78,6 +78,7 @@ Double_t ChiSq()
   Double_t ChiSq_0,  ChiSq_S,  ChiSq_T,  ChiSq_P;
   Double_t ChiSq_E,  ChiSq_F,  ChiSq_G,  ChiSq_H;
   Double_t ChiSq_Cx, ChiSq_Cz, ChiSq_Ox, ChiSq_Oz;
+  Double_t ChiSq_Lx, ChiSq_Lz, ChiSq_Tx, ChiSq_Tz;
 
   //Get chi^2 for all observables for given global energy
   ChiSq_0  = GetChiSq_sg0();
@@ -92,10 +93,17 @@ Double_t ChiSq()
   ChiSq_Cz = GetChiSq_sgCz() + GetChiSq_Cz();
   ChiSq_Ox = GetChiSq_sgOx() + GetChiSq_Ox();
   ChiSq_Oz = GetChiSq_sgOz() + GetChiSq_Oz();
+  ChiSq_Lx = GetChiSq_sgLx() + GetChiSq_Lx();
+  ChiSq_Lz = GetChiSq_sgLz() + GetChiSq_Lz();
+  ChiSq_Tx = GetChiSq_sgTx() + GetChiSq_Tx();
+  ChiSq_Tz = GetChiSq_sgTz() + GetChiSq_Tz();
 
   if(ONLY_CROSS_S) return (ChiSq_0 + ChiSq_S);
   if(ONLY_CROSS_F) return (ChiSq_0 + ChiSq_F);
-  return (ChiSq_0 + ChiSq_S + ChiSq_T + ChiSq_P + ChiSq_E + ChiSq_F + ChiSq_G + ChiSq_H + ChiSq_Cx + ChiSq_Cz + ChiSq_Ox + ChiSq_Oz);
+  return (ChiSq_0  + ChiSq_S  + ChiSq_T  + ChiSq_P  +
+          ChiSq_E  + ChiSq_F  + ChiSq_G  + ChiSq_H  +
+          ChiSq_Cx + ChiSq_Cz + ChiSq_Ox + ChiSq_Oz +
+          ChiSq_Lx + ChiSq_Lz + ChiSq_Tx + ChiSq_Tz);
 }
 
 //-----------------------------------------------------------------------------
@@ -107,6 +115,7 @@ Double_t Scale()
   Double_t Scale_0,  Scale_S,  Scale_T,  Scale_P;
   Double_t Scale_E,  Scale_F,  Scale_G,  Scale_H;
   Double_t Scale_Cx, Scale_Cz, Scale_Ox, Scale_Oz;
+  Double_t Scale_Lx, Scale_Lz, Scale_Tx, Scale_Tz;
 
   Scale_0  = GetScale_sg0();
   Scale_S  = GetScale_sgS()  + GetScale_S();
@@ -120,6 +129,10 @@ Double_t Scale()
   Scale_Cz = GetScale_sgCz() + GetScale_Cz();
   Scale_Ox = GetScale_sgOx() + GetScale_Ox();
   Scale_Oz = GetScale_sgOz() + GetScale_Oz();
+  Scale_Lx = GetScale_sgLx() + GetScale_Lx();
+  Scale_Lz = GetScale_sgLz() + GetScale_Lz();
+  Scale_Tx = GetScale_sgTx() + GetScale_Tx();
+  Scale_Tz = GetScale_sgTz() + GetScale_Tz();
 
   if(ONLY_CROSS_S) return SCALING*(Scale_0 + Scale_S)/NSca();
   if(ONLY_CROSS_F) return SCALING*(Scale_0 + Scale_F)/NSca();
@@ -128,7 +141,10 @@ Double_t Scale()
   //So, it is divided by the number of scaling parameters (NSca) that are taken into
   //account (i.e. normalise the penalty to a single parameter case). The number of data
   //points is already considered when calculating the individual contributions.
-  return SCALING*(Scale_0 + Scale_S + Scale_T + Scale_P + Scale_E + Scale_F + Scale_G + Scale_H + Scale_Cx + Scale_Cz + Scale_Ox + Scale_Oz)/NSca();
+  return SCALING*(Scale_0  + Scale_S  + Scale_T  + Scale_P  +
+                  Scale_E  + Scale_F  + Scale_G  + Scale_H  +
+                  Scale_Cx + Scale_Cz + Scale_Ox + Scale_Oz +
+                  Scale_Lx + Scale_Lz + Scale_Tx + Scale_Tz)/NSca();
 }
 
 //-----------------------------------------------------------------------------
@@ -147,6 +163,14 @@ Double_t Penalty()
     return PenaltyCGLN();
    case HELI:
     return PenaltyHELI();
+   case HELI2:
+    return PenaltyHELI2();
+   case INVA:
+    return PenaltyINVA();
+   case INVB:
+    return PenaltyINVB();
+   case CONT:
+    return PenaltyCONT();
    case NONE:
    default:
     return 0.0;
@@ -231,7 +255,7 @@ Double_t PenaltyMLP1()
   //account (i.e. normalise the penalty to a single parameter case) and multiplied by
   //the number of data points (NPts) that are used for chi^2. Also, it is normalised
   //to an average magnitude^2 of a single real (or imaginary) part of model multipoles.
-  return PENALTY[MLP1]*(SumSq/MagSq)*(NPts()/NMlp());
+  return PENALTY[MLP1]*SumSq*NPts()/(MagSq*NMlp());
 }
 
 //-----------------------------------------------------------------------------
@@ -282,7 +306,7 @@ Double_t PenaltyMLP2()
   //So, it is divided by the number of multipole parameters (NMlp) that are taken into
   //account (i.e. normalise the penalty to a single parameter case) and multiplied by
   //the number of data points (NPts) that are used for chi^2.
-  return PENALTY[MLP2]*SumSq*(NPts()/NMlp());
+  return PENALTY[MLP2]*SumSq*NPts()/NMlp();
 }
 
 //-----------------------------------------------------------------------------
@@ -290,9 +314,13 @@ Double_t PenaltyMLP2()
 Double_t PenaltyCGLN()
 {
   Int_t eM = GetEnergyBin_maid();
-  Int_t Nsteps = NPts();
+  Int_t Npts = NPts();
+  Int_t Nsteps;
   Double_t CosTheta, DCosTheta;
   Double_t SumSq = 0.0;
+
+  Nsteps = Npts;
+  if(Nsteps > NSTEPS) Nsteps = NSTEPS; //Limit number of step for reasonable performance
 
   DCosTheta = 2.0/Nsteps; //Calculate costheta step size
   for(Int_t n=0; n<Nsteps; n++)
@@ -305,7 +333,9 @@ Double_t PenaltyCGLN()
   //Here it is summed up to the number of theta points from all observables
   //(i.e. NPts costheta positions are used) and EvaluateCGLN() normalises to
   //the sum of F1...F4 magnitudes. Hence, no further normalisation is required.
-  return SumSq;
+  //Note: The number of steps is limited, hence for large number of points,
+  //a correction is required.
+  return SumSq*Npts/Nsteps;
 }
 
 //-----------------------------------------------------------------------------
@@ -313,9 +343,13 @@ Double_t PenaltyCGLN()
 Double_t PenaltyHELI()
 {
   Int_t eM = GetEnergyBin_maid();
-  Int_t Nsteps = NPts();
+  Int_t Npts = NPts();
+  Int_t Nsteps;
   Double_t CosTheta, DCosTheta;
   Double_t SumSq = 0.0;
+
+  Nsteps = Npts;
+  if(Nsteps > NSTEPS) Nsteps = NSTEPS; //Limit number of step for reasonable performance
 
   DCosTheta = 2.0/Nsteps; //Calculate costheta step size
   for(Int_t n=0; n<Nsteps; n++)
@@ -328,8 +362,132 @@ Double_t PenaltyHELI()
   //Here it is summed up to the number of theta points from all observables
   //(i.e. NPts costheta positions are used) and EvaluateHELI() normalises to
   //the sum of H1...H4 magnitudes. Hence, no further normalisation is required.
+  //Note: The number of steps is limited, hence for large number of points,
+  //a correction is required.
+  return SumSq*Npts/Nsteps;
+}
+
+//-----------------------------------------------------------------------------
+
+
+Double_t PenaltyHELI2()
+{
+  Int_t eM = GetEnergyBin_heli();
+  Double_t CosTheta, DCosTheta;
+  Double_t SumSq = 0.0;
+
+  for(Int_t n=0; n < heli_nz[eM]; n++)
+  {
+    SumSq+=(heli_H1[n][eM].Re()-H1(heli_z[n][eM]).Re())*(heli_H1[n][eM].Re()-H1(heli_z[n][eM]).Re());
+    SumSq+=(heli_H2[n][eM].Re()-H2(heli_z[n][eM]).Re())*(heli_H2[n][eM].Re()-H2(heli_z[n][eM]).Re());
+    SumSq+=(heli_H3[n][eM].Re()-H3(heli_z[n][eM]).Re())*(heli_H3[n][eM].Re()-H3(heli_z[n][eM]).Re());
+    SumSq+=(heli_H4[n][eM].Re()-H4(heli_z[n][eM]).Re())*(heli_H4[n][eM].Re()-H4(heli_z[n][eM]).Re());
+    
+    SumSq+=(heli_H1[n][eM].Im()-H1(heli_z[n][eM]).Im())*(heli_H1[n][eM].Im()-H1(heli_z[n][eM]).Im());
+    SumSq+=(heli_H2[n][eM].Im()-H2(heli_z[n][eM]).Im())*(heli_H2[n][eM].Im()-H2(heli_z[n][eM]).Im());
+    SumSq+=(heli_H3[n][eM].Im()-H3(heli_z[n][eM]).Im())*(heli_H3[n][eM].Im()-H3(heli_z[n][eM]).Im());
+    SumSq+=(heli_H4[n][eM].Im()-H4(heli_z[n][eM]).Im())*(heli_H4[n][eM].Im()-H4(heli_z[n][eM]).Im());
+  
+  }
+
   return SumSq;
 }
+
+
+
+
+//-----------------------------------------------------------------------------
+
+Double_t PenaltyINVA()
+{
+  Int_t eM = GetEnergyBin_maid();
+  Int_t Npts = NPts();
+  Int_t Nsteps;
+  Double_t CosTheta, DCosTheta;
+  Double_t SumSq = 0.0;
+
+  Nsteps = Npts;
+  if(Nsteps > NSTEPS) Nsteps = NSTEPS; //Limit number of step for reasonable performance
+
+  DCosTheta = 2.0/Nsteps; //Calculate costheta step size
+  for(Int_t n=0; n<Nsteps; n++)
+  {
+    CosTheta = DCosTheta*n + DCosTheta/2.0 - 1.0; //Calculate central position of current costheta step
+    SumSq+=EvaluateINVA(CosTheta, eM);
+  }
+
+  //Without additional weighting, the penalty should be comparable to chi^2.
+  //Here it is summed up to the number of theta points from all observables
+  //(i.e. NPts costheta positions are used) and EvaluateINVA() normalises to
+  //the sum of A1...A4 magnitudes. Hence, no further normalisation is required.
+  //Note: The number of steps is limited, hence for large number of points,
+  //a correction is required.
+  return SumSq*Npts/Nsteps;
+}
+
+//-----------------------------------------------------------------------------
+
+Double_t PenaltyINVB()
+{
+  Int_t eM = GetEnergyBin_maid();
+  Int_t Npts = NPts();
+  Int_t Nsteps;
+  Double_t CosTheta, DCosTheta;
+  Double_t SumSq = 0.0;
+
+  Nsteps = Npts;
+  if(Nsteps > NSTEPS) Nsteps = NSTEPS; //Limit number of step for reasonable performance
+
+  DCosTheta = 2.0/Nsteps; //Calculate costheta step size
+  for(Int_t n=0; n<Nsteps; n++)
+  {
+    CosTheta = DCosTheta*n + DCosTheta/2.0 - 1.0; //Calculate central position of current costheta step
+    SumSq+=EvaluateINVB(CosTheta, eM);
+  }
+
+  //Without additional weighting, the penalty should be comparable to chi^2.
+  //Here it is summed up to the number of theta points from all observables
+  //(i.e. NPts costheta positions are used) and EvaluateINVB() normalises to
+  //the sum of B1...B8 magnitudes. Hence, no further normalisation is required.
+  //Note: The number of steps is limited, hence for large number of points,
+  //a correction is required.
+  return SumSq*Npts/Nsteps;
+}
+
+
+
+//-----------------------------------------------------------------------------
+
+Double_t PenaltyCONT()
+{
+  Int_t eM = GetEnergyBin_maid();
+  Int_t Npts = NPts();
+  Int_t Nsteps;
+  Double_t CosTheta, DCosTheta;
+  Double_t SumSq = 0.0;
+
+  Nsteps = Npts;
+  if(Nsteps > NSTEPS) Nsteps = NSTEPS; //Limit number of step for reasonable performance
+
+  DCosTheta = 2.0/Nsteps; //Calculate costheta step size
+  for(Int_t n=0; n<Nsteps; n++)
+  {
+    CosTheta = DCosTheta*n + DCosTheta/2.0 - 1.0; //Calculate central position of current costheta step
+    SumSq+=EvaluateCONT(CosTheta, eM);
+  }
+
+  //Without additional weighting, the penalty should be comparable to chi^2.
+  //Here it is summed up to the number of theta points from all observables
+  //(i.e. NPts costheta positions are used) and EvaluateCGLN() normalises to
+  //the sum of F1...F4 magnitudes. Hence, no further normalisation is required.
+  //Note: The number of steps is limited, hence for large number of points,
+  //a correction is required.
+  return SumSq*Npts/Nsteps;
+}
+
+//-----------------------------------------------------------------------------
+
+
 
 //-----------------------------------------------------------------------------
 
@@ -338,6 +496,7 @@ Int_t NPts()
   Int_t NPts_0,  NPts_S,  NPts_T,  NPts_P;
   Int_t NPts_E,  NPts_F,  NPts_G,  NPts_H;
   Int_t NPts_Cx, NPts_Cz, NPts_Ox, NPts_Oz;
+  Int_t NPts_Lx, NPts_Lz, NPts_Tx, NPts_Tz;
 
   NPts_0  = GetNPts_sg0();
   NPts_S  = GetNPts_sgS()  + GetNPts_S();
@@ -351,11 +510,18 @@ Int_t NPts()
   NPts_Cz = GetNPts_sgCz() + GetNPts_Cz();
   NPts_Ox = GetNPts_sgOx() + GetNPts_Ox();
   NPts_Oz = GetNPts_sgOz() + GetNPts_Oz();
+  NPts_Lx = GetNPts_sgLx() + GetNPts_Lx();
+  NPts_Lz = GetNPts_sgLz() + GetNPts_Lz();
+  NPts_Tx = GetNPts_sgTx() + GetNPts_Tx();
+  NPts_Tz = GetNPts_sgTz() + GetNPts_Tz();
 
   if(ONLY_CROSS_S) return (NPts_0 + NPts_S);
   if(ONLY_CROSS_F) return (NPts_0 + NPts_F);
 
-  return (NPts_0 + NPts_S + NPts_T + NPts_P + NPts_E + NPts_F + NPts_G + NPts_H + NPts_Cx + NPts_Cz + NPts_Ox + NPts_Oz);
+  return (NPts_0  + NPts_S  + NPts_T  + NPts_P  +
+          NPts_E  + NPts_F  + NPts_G  + NPts_H  +
+          NPts_Cx + NPts_Cz + NPts_Ox + NPts_Oz +
+          NPts_Lx + NPts_Lz + NPts_Tx + NPts_Tz);
 }
 
 //-----------------------------------------------------------------------------
@@ -429,6 +595,10 @@ Int_t NSca()
   if(GetNPts_sgCz()) NSca+=1;
   if(GetNPts_sgOx()) NSca+=1;
   if(GetNPts_sgOz()) NSca+=1;
+  if(GetNPts_sgLx()) NSca+=1;
+  if(GetNPts_sgLz()) NSca+=1;
+  if(GetNPts_sgTx()) NSca+=1;
+  if(GetNPts_sgTz()) NSca+=1;
   if(GetNPts_S())    NSca+=1;
   if(GetNPts_T())    NSca+=1;
   if(GetNPts_P())    NSca+=1;
@@ -440,6 +610,10 @@ Int_t NSca()
   if(GetNPts_Cz())   NSca+=1;
   if(GetNPts_Ox())   NSca+=1;
   if(GetNPts_Oz())   NSca+=1;
+  if(GetNPts_Lx())   NSca+=1;
+  if(GetNPts_Lz())   NSca+=1;
+  if(GetNPts_Tx())   NSca+=1;
+  if(GetNPts_Tz())   NSca+=1;
 
   return NSca;
 }
@@ -532,6 +706,38 @@ Bool_t SingleFit()
   //Get fit parameters and use them for multipoles
   GetParameters(Param, Error);
   UseParameters(Param, Error);
+
+  /*Double_t CosTheta;
+  Double_t E_i, E_f;
+  Double_t m, m2, M_i, M2_i, M_f, M2_f;
+  Double_t W, q, k, w;
+  Double_t s, t;
+
+  W = W_cm(gEnergy)/1e3;
+  q = q_mes(gEnergy)/1e3;
+  k = omega_cm(gEnergy)/1e3;
+
+  m   = MASS_MESON/1e3;   m2   = MASS2_MESON/1e6;
+  M_i = MASS_INITIAL/1e3; M2_i = MASS2_INITIAL/1e6;
+  M_f = MASS_INITIAL/1e3; M2_f = MASS2_INITIAL/1e6;
+
+  w = Sqrt(m2 + q*q);
+
+  s = W*W;
+
+  for(CosTheta = -1.0; CosTheta < +1.0; CosTheta+=0.01)
+  {
+    t = m2 - 2.0*k*(w - q*CosTheta);
+    if((t < -0.149) && (t > -0.151))
+    {
+      printf("IA Ax: %f  %f     %f  %f     %f  %f     %f  %f     %f  %f\n", W, t,
+             A1(CosTheta).Re(), A1(CosTheta).Im(), A2(CosTheta).Re(), A2(CosTheta).Im(),
+             A3(CosTheta).Re(), A3(CosTheta).Im(), A4(CosTheta).Re(), A4(CosTheta).Im());
+      printf("IA Bx: %f  %f     %f  %f     %f  %f     %f  %f     %f  %f\n", W, t,
+             B1(CosTheta).Re(), B1(CosTheta).Im(), B2(CosTheta).Re(), B2(CosTheta).Im(),
+             B6(CosTheta).Re(), B6(CosTheta).Im(), B8(CosTheta).Re(), B8(CosTheta).Im());
+    }
+  }*/
 
   return true; //Fit was successful
 }
@@ -627,6 +833,7 @@ void Fit()
   Int_t Unique = 1; //Counts number of found unique solutions
 
   //Perform multiple fits for given energy point
+
   for(Int_t n=0; n<ITERATIONS; n++)
   {
     //Try to perform successful single fit with penalty (stop after finite number of attempts)
@@ -668,7 +875,8 @@ void Fit()
   for(Int_t n=1; n<SOLUTIONS; n++)
     if(Sol[n]!=Sol[n-1]) Unique++;
 
-  //Apply and store unique solutions (in reverse order, so that best solution is applied at the end)
+  //Apply and store unique solutions (in reverse order, so that best solution is applied at the end).
+  //This will make the best solution in Ep[], Em[], Mp[], Mm[] available for further use after fitting is finished.
   for(Int_t s=Unique-1; s>-1; s--)
   {
     //Use fit parameters and errors from current solution for multipoles
@@ -678,6 +886,15 @@ void Fit()
   }
   //Store model parameters for graph plots
   StoreModel();
+  for(Int_t l=0; l<L_MAX+1; l++)
+    {
+      Ep_prev[l]=Ep[l];
+      Mp_prev[l]=Mp[l];
+      Em_prev[l]=Em[l];      
+      Mm_prev[l]=Mm[l];
+    }
+
+
   return;
 
   //Debug output
@@ -1286,6 +1503,10 @@ void FixScalings()
     if(!sgCz_pts[GetEnergyBins_sgCz()]) gMinuit->FixParameter(8*L_MAX + SIG_CZ);
     if(!sgOx_pts[GetEnergyBins_sgOx()]) gMinuit->FixParameter(8*L_MAX + SIG_OX);
     if(!sgOz_pts[GetEnergyBins_sgOz()]) gMinuit->FixParameter(8*L_MAX + SIG_OZ);
+    if(!sgCx_pts[GetEnergyBins_sgLx()]) gMinuit->FixParameter(8*L_MAX + SIG_LX);
+    if(!sgCz_pts[GetEnergyBins_sgLz()]) gMinuit->FixParameter(8*L_MAX + SIG_LZ);
+    if(!sgOx_pts[GetEnergyBins_sgTx()]) gMinuit->FixParameter(8*L_MAX + SIG_TX);
+    if(!sgOz_pts[GetEnergyBins_sgTz()]) gMinuit->FixParameter(8*L_MAX + SIG_TZ);
     if(!S_pts[GetEnergyBins_S()])       gMinuit->FixParameter(8*L_MAX + ASY_S);
     if(!T_pts[GetEnergyBins_T()])       gMinuit->FixParameter(8*L_MAX + ASY_T);
     if(!P_pts[GetEnergyBins_P()])       gMinuit->FixParameter(8*L_MAX + ASY_P);
@@ -1297,6 +1518,10 @@ void FixScalings()
     if(!Cz_pts[GetEnergyBins_Cz()])     gMinuit->FixParameter(8*L_MAX + ASY_CZ);
     if(!Ox_pts[GetEnergyBins_Ox()])     gMinuit->FixParameter(8*L_MAX + ASY_OX);
     if(!Oz_pts[GetEnergyBins_Oz()])     gMinuit->FixParameter(8*L_MAX + ASY_OZ);
+    if(!Cx_pts[GetEnergyBins_Lx()])     gMinuit->FixParameter(8*L_MAX + ASY_LX);
+    if(!Cz_pts[GetEnergyBins_Lz()])     gMinuit->FixParameter(8*L_MAX + ASY_LZ);
+    if(!Ox_pts[GetEnergyBins_Tx()])     gMinuit->FixParameter(8*L_MAX + ASY_TX);
+    if(!Oz_pts[GetEnergyBins_Tz()])     gMinuit->FixParameter(8*L_MAX + ASY_TZ);
   }
 }
 

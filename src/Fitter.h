@@ -15,6 +15,10 @@
 #include "Provide_sgCz.h"
 #include "Provide_sgOx.h"
 #include "Provide_sgOz.h"
+#include "Provide_sgLx.h"
+#include "Provide_sgLz.h"
+#include "Provide_sgTx.h"
+#include "Provide_sgTz.h"
 #include "Provide_S.h"
 #include "Provide_T.h"
 #include "Provide_P.h"
@@ -26,8 +30,14 @@
 #include "Provide_Cz.h"
 #include "Provide_Ox.h"
 #include "Provide_Oz.h"
+#include "Provide_Lx.h"
+#include "Provide_Lz.h"
+#include "Provide_Tx.h"
+#include "Provide_Tz.h"
 #include "Parse_MAID.h"
+#include "Parse_HELI.h"
 #include "Multipoles.h"
+#include "Invariant.h"
 
 //-----------------------------------------------------------------------------
 
@@ -38,6 +48,11 @@ extern TComplex DEp[LBINS];
 extern TComplex DEm[LBINS];
 extern TComplex DMp[LBINS];
 extern TComplex DMm[LBINS];
+
+extern TComplex Ep_prev[LBINS];
+extern TComplex Em_prev[LBINS];
+extern TComplex Mp_prev[LBINS];
+extern TComplex Mm_prev[LBINS];
 
 extern Double_t f_obs[OBS];
 extern Double_t Df_obs[OBS];
@@ -75,6 +90,10 @@ Double_t PenaltyMLP1();
 Double_t PenaltyMLP2();
 Double_t PenaltyCGLN();
 Double_t PenaltyHELI();
+Double_t PenaltyHELI2();
+Double_t PenaltyINVA();
+Double_t PenaltyINVB();
+Double_t PenaltyCONT();
 Double_t VariateRel();
 Double_t VariateAbs();
 Double_t GetErrors(Double_t* Par, Double_t* Err);
@@ -155,5 +174,76 @@ inline Double_t EvaluateHELI(Double_t CosTheta, Int_t eM)
 
 //-----------------------------------------------------------------------------
 
+inline Double_t EvaluateINVA(Double_t CosTheta, Int_t eM)
+{
+  Double_t SumSq = 0.0;
+  Double_t MagSq = 0.0;
+  TComplex A_data;
+  TComplex A_maid;
+
+  //Sum up H1...H4 amplitudes
+  for(Int_t i=1; i<5; i++)
+  {
+    //Get amplitudes from current fit parameters and model values
+    A_data = A(i, CosTheta);
+    A_maid = maid_A(i, CosTheta, eM);
+    //Sum up all squared amplitude deviations with adjustable weight factor
+    SumSq+=(A_data - A_maid).Rho2()/(WEIGHT[i]*WEIGHT[i]);
+    //Sum up squared model amplitude magnitudes (will be used as normalisation factor)
+    MagSq+=A_maid.Rho2();
+  }
+  return SumSq/MagSq;
+}
+
+//-----------------------------------------------------------------------------
+
+inline Double_t EvaluateINVB(Double_t CosTheta, Int_t eM)
+{
+  Double_t SumSq = 0.0;
+  Double_t MagSq = 0.0;
+  TComplex B_data;
+  TComplex B_maid;
+
+  //Sum up B1...B8 amplitudes
+  for(Int_t i=1; i<9; i++)
+  {
+    //Get amplitudes from current fit parameters and model values
+    B_data = B(i, CosTheta);
+    B_maid = maid_B(i, CosTheta, eM);
+    //Sum up all squared amplitude deviations with adjustable weight factor
+    SumSq+=(B_data - B_maid).Rho2()/(WEIGHT[i]*WEIGHT[i]);
+    //Sum up squared model amplitude magnitudes (will be used as normalisation factor)
+    MagSq+=B_maid.Rho2();
+  }
+  return SumSq/MagSq;
+}
+
+//-----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+
+inline Double_t EvaluateCONT(Double_t CosTheta, Int_t eM)
+{
+  Double_t SumSq = 0.0;
+  Double_t MagSq = 0.0;
+  TComplex F_data;
+  TComplex F_maid;
+
+  //Sum up F1...F4 amplitudes
+  for(Int_t i=1; i<5; i++)
+  {
+    //Get amplitudes from current fit parameters and model values
+    F_data = F(i, CosTheta);
+    F_maid = F_prev(i, CosTheta);
+    //Sum up all squared amplitude deviations with adjustable weight factor
+    SumSq+=(F_data - F_maid).Rho2()/(WEIGHT[i]*WEIGHT[i]);
+    //Sum up squared model amplitude magnitudes (will be used as normalisation factor)
+    MagSq+=F_maid.Rho2();
+  }
+  return SumSq/MagSq;
+}
+
+//-----------------------------------------------------------------------------
+
 #endif
+
 

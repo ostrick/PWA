@@ -102,8 +102,8 @@ Double_t GetChiSq_Cz()
     for(Int_t th=0; th<Cz_pts[eCz[n]]; th++) //Process all data points in current bin
     {
       Theta = Cz_th[eCz[n]][th];
-      Meas  = Cz_sc[eCz[n]]*Cz_val[eCz[n]][th]*f_obs[SIG_0];
-      Error = Cz_sc[eCz[n]]*Cz_err[eCz[n]][th]*f_obs[SIG_0];
+      Meas  = Cz_sc[eCz[n]]*Cz_val[eCz[n]][th]*f_obs[ASY_CZ];
+      Error = Cz_sc[eCz[n]]*Cz_err[eCz[n]][th]*f_obs[ASY_CZ];
       Theo  = Cz(Theta, Omega);
       //printf("Cz: %f: %f %f  = %f\n", Theta, Theo, Meas, Theo/Meas);
       ChiSq_Cz+=(Cz_wt[eCz[n]]*((Meas-Theo)*(Meas-Theo)/(Error*Error)));
@@ -131,7 +131,10 @@ void Sort_Cz(Int_t l, Int_t r) //Quicksort implementation on Cz data arrays
      Swap(&Cz_hi[i],  &Cz_hi[j]);
      Swap(&Cz_wt[i],  &Cz_wt[j]);
      Swap(&Cz_sy[i],  &Cz_sy[j]);
+     Swap(&Cz_sc[i],  &Cz_sc[j]);
      Swap(&Cz_pts[i], &Cz_pts[j]);
+     Swap(&Cz_pre[i], &Cz_pre[j]);
+     Swap(Cz_id[i],   Cz_id[j]);
      for(Int_t n=0; n<THBINS; n++)
      {
         Swap(&Cz_val[i][n], &Cz_val[j][n]);
@@ -145,7 +148,10 @@ void Sort_Cz(Int_t l, Int_t r) //Quicksort implementation on Cz data arrays
    Swap(&Cz_hi[i],  &Cz_hi[r]);
    Swap(&Cz_wt[i],  &Cz_wt[r]);
    Swap(&Cz_sy[i],  &Cz_sy[r]);
+   Swap(&Cz_sc[i],  &Cz_sc[r]);
    Swap(&Cz_pts[i], &Cz_pts[r]);
+   Swap(&Cz_pre[i], &Cz_pre[r]);
+   Swap(Cz_id[i],   Cz_id[r]);
    for(Int_t n=0; n<THBINS; n++)
    {
       Swap(&Cz_val[i][n], &Cz_val[r][n]);
@@ -168,7 +174,7 @@ Double_t GetScale_Cz()
   Int_t nCz = GetEnergyBins_Cz(eCz); //Get list of all energy bins covering given global energy
 
   for(Int_t n=0; n<nCz; n++) //Process all found bins
-    Scale_Cz+=(1.0*Cz_pts[eCz[n]])*(f_obs[SIG_0]-1.0)*(f_obs[SIG_0]-1.0)/(Cz_sy[eCz[n]]*Cz_sy[eCz[n]]);
+    Scale_Cz+=(f_obs[ASY_CZ]-1.0)*(f_obs[ASY_CZ]-1.0)*Cz_pts[eCz[n]]/(Cz_sy[eCz[n]]*Cz_sy[eCz[n]]);
 
   return Scale_Cz;
 }

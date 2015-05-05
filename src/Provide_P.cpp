@@ -102,8 +102,8 @@ Double_t GetChiSq_P()
     for(Int_t th=0; th<P_pts[eP[n]]; th++) //Process all data points in current bin
     {
       Theta = P_th[eP[n]][th];
-      Meas  = P_sc[eP[n]]*P_val[eP[n]][th]*f_obs[SIG_0];
-      Error = P_sc[eP[n]]*P_err[eP[n]][th]*f_obs[SIG_0];
+      Meas  = P_sc[eP[n]]*P_val[eP[n]][th]*f_obs[ASY_P];
+      Error = P_sc[eP[n]]*P_err[eP[n]][th]*f_obs[ASY_P];
       Theo  = P(Theta, Omega);
       //printf("P: %f: %f %f  = %f\n", Theta, Theo, Meas, Theo/Meas);
       ChiSq_P+=(P_wt[eP[n]]*((Meas-Theo)*(Meas-Theo)/(Error*Error)));
@@ -131,7 +131,10 @@ void Sort_P(Int_t l, Int_t r) //Quicksort implementation on P data arrays
      Swap(&P_hi[i],  &P_hi[j]);
      Swap(&P_wt[i],  &P_wt[j]);
      Swap(&P_sy[i],  &P_sy[j]);
+     Swap(&P_sc[i],  &P_sc[j]);
      Swap(&P_pts[i], &P_pts[j]);
+     Swap(&P_pre[i], &P_pre[j]);
+     Swap(P_id[i],   P_id[j]);
      for(Int_t n=0; n<THBINS; n++)
      {
         Swap(&P_val[i][n], &P_val[j][n]);
@@ -145,7 +148,10 @@ void Sort_P(Int_t l, Int_t r) //Quicksort implementation on P data arrays
    Swap(&P_hi[i],  &P_hi[r]);
    Swap(&P_wt[i],  &P_wt[r]);
    Swap(&P_sy[i],  &P_sy[r]);
+   Swap(&P_sc[i],  &P_sc[r]);
    Swap(&P_pts[i], &P_pts[r]);
+   Swap(&P_pre[i], &P_pre[r]);
+   Swap(P_id[i],   P_id[r]);
    for(Int_t n=0; n<THBINS; n++)
    {
       Swap(&P_val[i][n], &P_val[r][n]);
@@ -168,7 +174,7 @@ Double_t GetScale_P()
   Int_t nP = GetEnergyBins_P(eP); //Get list of all energy bins covering given global energy
 
   for(Int_t n=0; n<nP; n++) //Process all found bins
-    Scale_P+=(1.0*P_pts[eP[n]])*(f_obs[SIG_0]-1.0)*(f_obs[SIG_0]-1.0)/(P_sy[eP[n]]*P_sy[eP[n]]);
+    Scale_P+=(f_obs[ASY_P]-1.0)*(f_obs[ASY_P]-1.0)*P_pts[eP[n]]/(P_sy[eP[n]]*P_sy[eP[n]]);
 
   return Scale_P;
 }

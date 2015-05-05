@@ -131,7 +131,10 @@ void Sort_sg0(Int_t l, Int_t r) //Quicksort implementation on sg0 data arrays
      Swap(&sg0_hi[i],  &sg0_hi[j]);
      Swap(&sg0_wt[i],  &sg0_wt[j]);
      Swap(&sg0_sy[i],  &sg0_sy[j]);
+     Swap(&sg0_sc[i],  &sg0_sc[j]);
      Swap(&sg0_pts[i], &sg0_pts[j]);
+     Swap(&sg0_pre[i], &sg0_pre[j]);
+     Swap(sg0_id[i],   sg0_id[j]);
      for(Int_t n=0; n<THBINS; n++)
      {
         Swap(&sg0_val[i][n], &sg0_val[j][n]);
@@ -145,7 +148,10 @@ void Sort_sg0(Int_t l, Int_t r) //Quicksort implementation on sg0 data arrays
    Swap(&sg0_hi[i],  &sg0_hi[r]);
    Swap(&sg0_wt[i],  &sg0_wt[r]);
    Swap(&sg0_sy[i],  &sg0_sy[r]);
+   Swap(&sg0_sc[i],  &sg0_sc[r]);
    Swap(&sg0_pts[i], &sg0_pts[r]);
+   Swap(&sg0_pre[i], &sg0_pre[r]);
+   Swap(sg0_id[i],   sg0_id[r]);
    for(Int_t n=0; n<THBINS; n++)
    {
       Swap(&sg0_val[i][n], &sg0_val[r][n]);
@@ -168,7 +174,7 @@ Double_t GetScale_sg0()
   Int_t n0 = GetEnergyBins_sg0(e0); //Get list of all energy bins covering given global energy
 
   for(Int_t n=0; n<n0; n++) //Process all found bins
-    Scale_sg0+=(1.0*sg0_pts[e0[n]])*(f_obs[SIG_0]-1.0)*(f_obs[SIG_0]-1.0)/(sg0_sy[e0[n]]*sg0_sy[e0[n]]);
+    Scale_sg0+=(f_obs[SIG_0]-1.0)*(f_obs[SIG_0]-1.0)*sg0_pts[e0[n]]/(sg0_sy[e0[n]]*sg0_sy[e0[n]]);
 
   return Scale_sg0;
 }

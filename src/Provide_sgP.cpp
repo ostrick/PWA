@@ -102,8 +102,8 @@ Double_t GetChiSq_sgP()
     for(Int_t th=0; th<sgP_pts[eP[n]]; th++) //Process all data points in current bin
     {
       Theta = sgP_th[eP[n]][th];
-      Meas  = sgP_sc[eP[n]]*sgP_val[eP[n]][th]*f_obs[SIG_0];
-      Error = sgP_sc[eP[n]]*sgP_err[eP[n]][th]*f_obs[SIG_0];
+      Meas  = sgP_sc[eP[n]]*sgP_val[eP[n]][th]*f_obs[SIG_P];
+      Error = sgP_sc[eP[n]]*sgP_err[eP[n]][th]*f_obs[SIG_P];
       Theo  = sigmaP(Theta, Omega);
       //printf("sgP: %f: %f %f  = %f\n", Theta, Theo, Meas, Theo/Meas);
       ChiSq_sgP+=(sgP_wt[eP[n]]*((Meas-Theo)*(Meas-Theo)/(Error*Error)));
@@ -131,7 +131,10 @@ void Sort_sgP(Int_t l, Int_t r) //Quicksort implementation on sgP data arrays
      Swap(&sgP_hi[i],  &sgP_hi[j]);
      Swap(&sgP_wt[i],  &sgP_wt[j]);
      Swap(&sgP_sy[i],  &sgP_sy[j]);
+     Swap(&sgP_sc[i],  &sgP_sc[j]);
      Swap(&sgP_pts[i], &sgP_pts[j]);
+     Swap(&sgP_pre[i], &sgP_pre[j]);
+     Swap(sgP_id[i],   sgP_id[j]);
      for(Int_t n=0; n<THBINS; n++)
      {
         Swap(&sgP_val[i][n], &sgP_val[j][n]);
@@ -145,7 +148,10 @@ void Sort_sgP(Int_t l, Int_t r) //Quicksort implementation on sgP data arrays
    Swap(&sgP_hi[i],  &sgP_hi[r]);
    Swap(&sgP_wt[i],  &sgP_wt[r]);
    Swap(&sgP_sy[i],  &sgP_sy[r]);
+   Swap(&sgP_sc[i],  &sgP_sc[r]);
    Swap(&sgP_pts[i], &sgP_pts[r]);
+   Swap(&sgP_pre[i], &sgP_pre[r]);
+   Swap(sgP_id[i],   sgP_id[r]);
    for(Int_t n=0; n<THBINS; n++)
    {
       Swap(&sgP_val[i][n], &sgP_val[r][n]);
@@ -168,7 +174,7 @@ Double_t GetScale_sgP()
   Int_t nP = GetEnergyBins_sgP(eP); //Get list of all energy bins covering given global energy
 
   for(Int_t n=0; n<nP; n++) //Process all found bins
-    Scale_sgP+=(1.0*sgP_pts[eP[n]])*(f_obs[SIG_0]-1.0)*(f_obs[SIG_0]-1.0)/(sgP_sy[eP[n]]*sgP_sy[eP[n]]);
+    Scale_sgP+=(f_obs[SIG_P]-1.0)*(f_obs[SIG_P]-1.0)*sgP_pts[eP[n]]/(sgP_sy[eP[n]]*sgP_sy[eP[n]]);
 
   return Scale_sgP;
 }

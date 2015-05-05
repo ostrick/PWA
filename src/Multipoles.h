@@ -13,6 +13,13 @@ extern TComplex Em[LBINS];
 extern TComplex Mp[LBINS];
 extern TComplex Mm[LBINS];
 
+
+
+extern TComplex Ep_prev[LBINS];
+extern TComplex Em_prev[LBINS];
+extern TComplex Mp_prev[LBINS];
+extern TComplex Mm_prev[LBINS];
+
 //-----------------------------------------------------------------------------
 
 inline Double_t q_mes(Double_t omega_lab)
@@ -153,6 +160,66 @@ inline TComplex F4(Double_t CosTheta)
   return Complex;
 }
 
+
+//-----------------------------------------------------------------------------
+//previous Fi
+//-----------------------------------------------------------------------------
+
+//CGLN amplitude F1 in expansion up to l_max
+inline TComplex F1_prev(Double_t CosTheta)
+{
+  TComplex Complex(0.0, 0.0);
+
+  for(Int_t l=0; l<L_MAX+1; l++)
+    Complex+=((Mp_prev[l]*(1.0*l) + Ep_prev[l]) * DL(l+1, CosTheta) + (Mm_prev[l]*(1.0*l + 1.0) + Em_prev[l]) * DL(l-1, CosTheta));
+
+  return Complex;
+}
+
+//-----------------------------------------------------------------------------
+
+//CGLN amplitude F2 in expansion up to l_max
+inline TComplex F2_prev(Double_t CosTheta)
+{
+  TComplex Complex(0.0, 0.0);
+
+  for(Int_t l=1; l<L_MAX+1; l++)
+    Complex+=((Mp_prev[l]*(1.0*l + 1.0) + Mm_prev[l]*(1.0*l)) * DL(l, CosTheta));
+
+  return Complex;
+}
+
+//-----------------------------------------------------------------------------
+
+//CGLN amplitude F3 in expansion up to l_max
+inline TComplex F3_prev(Double_t CosTheta)
+{
+  TComplex Complex(0.0, 0.0);
+
+  for(Int_t l=1; l<L_MAX+1; l++)
+    Complex+=((Ep_prev[l] - Mp_prev[l]) * D2L(l+1, CosTheta) + (Em_prev[l] + Mm_prev[l]) * D2L(l-1, CosTheta));
+
+  return Complex;
+}
+
+//-----------------------------------------------------------------------------
+
+//CGLN amplitude F4 in expansion up to l_max
+inline TComplex F4_prev(Double_t CosTheta)
+{
+  TComplex Complex(0.0, 0.0);
+
+  for(Int_t l=2; l<L_MAX+1; l++)
+    Complex+=((Mp_prev[l] - Ep_prev[l] - Mm_prev[l] - Em_prev[l]) * D2L(l, CosTheta));
+
+  return Complex;
+}
+
+
+
+
+
+//-----------------------------------------------------------------------------
 //-----------------------------------------------------------------------------
 
 //Wrapper for explicit CGLN amplitudes F_i
@@ -167,6 +234,21 @@ inline TComplex F(Int_t i, Double_t CosTheta)
     default: return TComplex(0.0, 0.0);
   }
 }
+
+
+//Wrapper for explicit CGLN amplitudes F_i
+inline TComplex F_prev(Int_t i, Double_t CosTheta)
+{
+  switch(i)
+  {
+    case 1: return F1_prev(CosTheta);
+    case 2: return F2_prev(CosTheta);
+    case 3: return F3_prev(CosTheta);
+    case 4: return F4_prev(CosTheta);
+    default: return TComplex(0.0, 0.0);
+  }
+}
+
 
 //-----------------------------------------------------------------------------
 
@@ -277,14 +359,18 @@ inline TComplex Hcc(Int_t i, Double_t CosTheta)
 
 inline Double_t sigma0(Double_t Theta, Double_t Omega)
 {
-  Double_t SinTheta = Sin(Theta*DegToRad());
   Double_t CosTheta = Cos(Theta*DegToRad());
-  Double_t Sin2Theta = SinTheta*SinTheta;
+  Double_t Sin2Theta = 1.0 - CosTheta*CosTheta;
+  TComplex f1 = F1(CosTheta);
+  TComplex f2 = F2(CosTheta);
+  TComplex f3 = F3(CosTheta);
+  TComplex f4 = F4(CosTheta);
+  TComplex f1cc = TComplex::Conjugate(f1); //F1cc(CosTheta);
+  TComplex f2cc = TComplex::Conjugate(f2); //F2cc(CosTheta);
+  TComplex f3cc = TComplex::Conjugate(f3); //F3cc(CosTheta);
 
-  TComplex Complex = F1(CosTheta).Rho2() + F2(CosTheta).Rho2()
-                   + Sin2Theta*(0.5*F3(CosTheta).Rho2() + 0.5*F4(CosTheta).Rho2() + F2cc(CosTheta)*F3(CosTheta) + F1cc(CosTheta)*F4(CosTheta) + CosTheta*F3cc(CosTheta)*F4(CosTheta))
-                   - 2.0*CosTheta*F1cc(CosTheta)*F2(CosTheta);
-
+  TComplex Complex = f1.Rho2() + f2.Rho2() + Sin2Theta*(0.5*f3.Rho2() + 0.5*f4.Rho2()
+                   + f2cc*f3 + f1cc*f4 + CosTheta*f3cc*f4) - 2.0*CosTheta*f1cc*f2;
   return Complex.Re()*rho(Omega)*UNIT;
 }
 
@@ -292,11 +378,15 @@ inline Double_t sigma0(Double_t Theta, Double_t Omega)
 
 inline Double_t sigmaS(Double_t Theta, Double_t Omega)
 {
-  Double_t SinTheta = Sin(Theta*DegToRad());
   Double_t CosTheta = Cos(Theta*DegToRad());
-  Double_t Sin2Theta = SinTheta*SinTheta;
+  Double_t Sin2Theta = 1.0 - CosTheta*CosTheta;
+  TComplex f3 = F3(CosTheta);
+  TComplex f4 = F4(CosTheta);
+  TComplex f1cc = F1cc(CosTheta);
+  TComplex f2cc = F2cc(CosTheta);
+  TComplex f3cc = TComplex::Conjugate(f3); //F3cc(CosTheta);
 
-  TComplex Complex = 0.5*(F3(CosTheta).Rho2() + F4(CosTheta).Rho2()) + F2cc(CosTheta)*F3(CosTheta) + F1cc(CosTheta)*F4(CosTheta) + CosTheta*F3cc(CosTheta)*F4(CosTheta);
+  TComplex Complex = 0.5*(f3.Rho2() + f4.Rho2()) + f2cc*f3 + f1cc*f4 + CosTheta*f3cc*f4;
   return -Sin2Theta*Complex.Re()*rho(Omega)*UNIT;
 }
 
@@ -307,10 +397,13 @@ inline Double_t sigmaT(Double_t Theta, Double_t Omega)
   Double_t SinTheta = Sin(Theta*DegToRad());
   Double_t CosTheta = Cos(Theta*DegToRad());
   Double_t Sin2Theta = SinTheta*SinTheta;
+  TComplex f3 = F3(CosTheta);
+  TComplex f4 = F4(CosTheta);
+  TComplex f1cc = F1cc(CosTheta);
+  TComplex f2cc = F2cc(CosTheta);
+  TComplex f3cc = TComplex::Conjugate(f3); //F3cc(CosTheta);
 
-  TComplex Complex = F1cc(CosTheta)*F3(CosTheta) - F2cc(CosTheta)*F4(CosTheta)
-                   + CosTheta*(F1cc(CosTheta)*F4(CosTheta) - F2cc(CosTheta)*F3(CosTheta))
-                   - Sin2Theta*F3cc(CosTheta)*F4(CosTheta);
+  TComplex Complex = f1cc*f3 - f2cc*f4 + CosTheta*(f1cc*f4 - f2cc*f3) - Sin2Theta*f3cc*f4;
   return SinTheta*Complex.Im()*rho(Omega)*UNIT;
 }
 
@@ -321,10 +414,14 @@ inline Double_t sigmaP(Double_t Theta, Double_t Omega)
   Double_t SinTheta = Sin(Theta*DegToRad());
   Double_t CosTheta = Cos(Theta*DegToRad());
   Double_t Sin2Theta = SinTheta*SinTheta;
+  TComplex f2 = F2(CosTheta);
+  TComplex f3 = F3(CosTheta);
+  TComplex f4 = F4(CosTheta);
+  TComplex f1cc = F1cc(CosTheta);
+  TComplex f2cc = TComplex::Conjugate(f2); //F2cc(CosTheta);
+  TComplex f3cc = TComplex::Conjugate(f3); //F3cc(CosTheta);
 
-  TComplex Complex = 2.0*F1cc(CosTheta)*F2(CosTheta) + F1cc(CosTheta)*F3(CosTheta) - F2cc(CosTheta)*F4(CosTheta)
-                   - CosTheta*(F2cc(CosTheta)*F3(CosTheta) - F1cc(CosTheta)*F4(CosTheta))
-                   - Sin2Theta*F3cc(CosTheta)*F4(CosTheta);
+  TComplex Complex = 2.0*f1cc*f2 + f1cc*f3 - f2cc*f4- CosTheta*(f2cc*f3 - f1cc*f4) - Sin2Theta*f3cc*f4;
   return -SinTheta*Complex.Im()*rho(Omega)*UNIT;
 }
 
@@ -334,9 +431,13 @@ inline Double_t sigmaH(Double_t Theta, Double_t Omega)
 {
   Double_t SinTheta = Sin(Theta*DegToRad());
   Double_t CosTheta = Cos(Theta*DegToRad());
+  TComplex f2 = F2(CosTheta);
+  TComplex f3 = F3(CosTheta);
+  TComplex f4 = F4(CosTheta);
+  TComplex f1cc = F1cc(CosTheta);
+  TComplex f2cc = TComplex::Conjugate(f2); //F2cc(CosTheta);
 
-  TComplex Complex = 2.0*F1cc(CosTheta)*F2(CosTheta) + F1cc(CosTheta)*F3(CosTheta) - F2cc(CosTheta)*F4(CosTheta)
-                   + CosTheta*(F1cc(CosTheta)*F4(CosTheta) - F2cc(CosTheta)*F3(CosTheta));
+  TComplex Complex = 2.0*f1cc*f2 + f1cc*f3 - f2cc*f4 + CosTheta*(f1cc*f4 - f2cc*f3);
   return SinTheta*Complex.Im()*rho(Omega)*UNIT;
 }
 
@@ -344,11 +445,14 @@ inline Double_t sigmaH(Double_t Theta, Double_t Omega)
 
 inline Double_t sigmaG(Double_t Theta, Double_t Omega)
 {
-  Double_t SinTheta = Sin(Theta*DegToRad());
   Double_t CosTheta = Cos(Theta*DegToRad());
-  Double_t Sin2Theta = SinTheta*SinTheta;
+  Double_t Sin2Theta = 1.0 - CosTheta*CosTheta;
+  TComplex f3 = F3(CosTheta);
+  TComplex f4 = F4(CosTheta);
+  TComplex f1cc = F1cc(CosTheta);
+  TComplex f2cc = F2cc(CosTheta);
 
-  TComplex Complex = F2cc(CosTheta)*F3(CosTheta) + F1cc(CosTheta)*F4(CosTheta);
+  TComplex Complex = f2cc*f3 + f1cc*f4;
   return Sin2Theta*Complex.Im()*rho(Omega)*UNIT;
 }
 
@@ -358,9 +462,12 @@ inline Double_t sigmaF(Double_t Theta, Double_t Omega)
 {
   Double_t SinTheta = Sin(Theta*DegToRad());
   Double_t CosTheta = Cos(Theta*DegToRad());
+  TComplex f3 = F3(CosTheta);
+  TComplex f4 = F4(CosTheta);
+  TComplex f1cc = F1cc(CosTheta);
+  TComplex f2cc = F2cc(CosTheta);
 
-  TComplex Complex = F1cc(CosTheta)*F3(CosTheta) - F2cc(CosTheta)*F4(CosTheta)
-                   - CosTheta*(F2cc(CosTheta)*F3(CosTheta) - F1cc(CosTheta)*F4(CosTheta));
+  TComplex Complex = f1cc*f3 - f2cc*f4 - CosTheta*(f2cc*f3 - f1cc*f4);
   return SinTheta*Complex.Re()*rho(Omega)*UNIT;
 }
 
@@ -368,13 +475,16 @@ inline Double_t sigmaF(Double_t Theta, Double_t Omega)
 
 inline Double_t sigmaE(Double_t Theta, Double_t Omega)
 {
-  Double_t SinTheta = Sin(Theta*DegToRad());
   Double_t CosTheta = Cos(Theta*DegToRad());
-  Double_t Sin2Theta = SinTheta*SinTheta;
+  Double_t Sin2Theta = 1.0 - CosTheta*CosTheta;
+  TComplex f1 = F1(CosTheta);
+  TComplex f2 = F2(CosTheta);
+  TComplex f3 = F3(CosTheta);
+  TComplex f4 = F4(CosTheta);
+  TComplex f1cc = TComplex::Conjugate(f1); //F1cc(CosTheta);
+  TComplex f2cc = TComplex::Conjugate(f2); //F2cc(CosTheta);
 
-  TComplex Complex = F1(CosTheta).Rho2() + F2(CosTheta).Rho2()
-                   - 2.0*CosTheta*F1cc(CosTheta)*F2(CosTheta)
-                   + Sin2Theta*(F2cc(CosTheta)*F3(CosTheta) + F1cc(CosTheta)*F4(CosTheta));
+  TComplex Complex = f1.Rho2() + f2.Rho2() - 2.0*CosTheta*f1cc*f2 + Sin2Theta*(f2cc*f3 + f1cc*f4);
   return Complex.Re()*rho(Omega)*UNIT;
 }
 
@@ -384,10 +494,14 @@ inline Double_t sigmaCx(Double_t Theta, Double_t Omega)
 {
   Double_t SinTheta = Sin(Theta*DegToRad());
   Double_t CosTheta = Cos(Theta*DegToRad());
+  TComplex f1 = F1(CosTheta);
+  TComplex f2 = F2(CosTheta);
+  TComplex f3 = F3(CosTheta);
+  TComplex f4 = F4(CosTheta);
+  TComplex f1cc = TComplex::Conjugate(f1); //F1cc(CosTheta);
+  TComplex f2cc = TComplex::Conjugate(f2); //F2cc(CosTheta);
 
-  TComplex Complex = F1(CosTheta).Rho2() - F2(CosTheta).Rho2()
-                   + F1cc(CosTheta)*F4(CosTheta) - F2cc(CosTheta)*F3(CosTheta)
-                   + CosTheta*(F1cc(CosTheta)*F3(CosTheta) - F2cc(CosTheta)*F4(CosTheta));
+  TComplex Complex = f1.Rho2() - f2.Rho2() + f1cc*f4 - f2cc*f3 + CosTheta*(f1cc*f3 - f2cc*f4);
   return SinTheta*Complex.Re()*rho(Omega)*UNIT;
 }
 
@@ -395,13 +509,16 @@ inline Double_t sigmaCx(Double_t Theta, Double_t Omega)
 
 inline Double_t sigmaCz(Double_t Theta, Double_t Omega)
 {
-  Double_t SinTheta = Sin(Theta*DegToRad());
   Double_t CosTheta = Cos(Theta*DegToRad());
-  Double_t Sin2Theta = SinTheta*SinTheta;
+  Double_t Sin2Theta = 1.0 - CosTheta*CosTheta;
+  TComplex f1 = F1(CosTheta);
+  TComplex f2 = F2(CosTheta);
+  TComplex f3 = F3(CosTheta);
+  TComplex f4 = F4(CosTheta);
+  TComplex f1cc = TComplex::Conjugate(f1); //F1cc(CosTheta);
+  TComplex f2cc = TComplex::Conjugate(f2); //F2cc(CosTheta);
 
-  TComplex Complex = 2.0*F1cc(CosTheta)*F2(CosTheta)
-                   + Sin2Theta*(F1cc(CosTheta)*F3(CosTheta) + F2cc(CosTheta)*F4(CosTheta))
-                   - CosTheta*(F1(CosTheta).Rho2() + F2(CosTheta).Rho2());
+  TComplex Complex = 2.0*f1cc*f2 + Sin2Theta*(f1cc*f3 + f2cc*f4) - CosTheta*(f1.Rho2() + f2.Rho2());
   return Complex.Re()*rho(Omega)*UNIT;
 }
 
@@ -411,9 +528,12 @@ inline Double_t sigmaOx(Double_t Theta, Double_t Omega)
 {
   Double_t SinTheta = Sin(Theta*DegToRad());
   Double_t CosTheta = Cos(Theta*DegToRad());
+  TComplex f3 = F3(CosTheta);
+  TComplex f4 = F4(CosTheta);
+  TComplex f1cc = F1cc(CosTheta);
+  TComplex f2cc = F2cc(CosTheta);
 
-  TComplex Complex = F1cc(CosTheta)*F4(CosTheta) - F2cc(CosTheta)*F3(CosTheta)
-                   + CosTheta*(F1cc(CosTheta)*F3(CosTheta) - F2cc(CosTheta)*F4(CosTheta));
+  TComplex Complex = f1cc*f4 - f2cc*f3 + CosTheta*(f1cc*f3 - f2cc*f4);
   return -SinTheta*Complex.Im()*rho(Omega)*UNIT;
 }
 
@@ -421,12 +541,88 @@ inline Double_t sigmaOx(Double_t Theta, Double_t Omega)
 
 inline Double_t sigmaOz(Double_t Theta, Double_t Omega)
 {
+  Double_t CosTheta = Cos(Theta*DegToRad());
+  Double_t Sin2Theta = 1.0 - CosTheta*CosTheta;
+  TComplex f3 = F3(CosTheta);
+  TComplex f4 = F4(CosTheta);
+  TComplex f1cc = F1cc(CosTheta);
+  TComplex f2cc = F2cc(CosTheta);
+
+  TComplex Complex = f1cc*f3 + f2cc*f4;
+  return -Sin2Theta*Complex.Im()*rho(Omega)*UNIT;
+}
+
+//-----------------------------------------------------------------------------
+
+inline Double_t sigmaLx(Double_t Theta, Double_t Omega)
+{
   Double_t SinTheta = Sin(Theta*DegToRad());
   Double_t CosTheta = Cos(Theta*DegToRad());
   Double_t Sin2Theta = SinTheta*SinTheta;
+  TComplex f1 = F1(CosTheta);
+  TComplex f2 = F2(CosTheta);
+  TComplex f3 = F3(CosTheta);
+  TComplex f4 = F4(CosTheta);
+  TComplex f1cc = TComplex::Conjugate(f1); //F1cc(CosTheta);
+  TComplex f2cc = TComplex::Conjugate(f2); //F2cc(CosTheta);
 
-  TComplex Complex = F1cc(CosTheta)*F3(CosTheta) + F2cc(CosTheta)*F4(CosTheta);
-  return -Sin2Theta*Complex.Im()*rho(Omega)*UNIT;
+  TComplex Complex = f1.Rho2() - f2.Rho2() - f2cc*f3 + f1cc*f4
+                   + 0.5*Sin2Theta*(f4.Rho2() - f3.Rho2())
+                   + CosTheta*(f1cc*f3 - f2cc*f4);
+  return -SinTheta*Complex.Re()*rho(Omega)*UNIT;
+}
+
+//-----------------------------------------------------------------------------
+
+inline Double_t sigmaLz(Double_t Theta, Double_t Omega)
+{
+  Double_t CosTheta = Cos(Theta*DegToRad());
+  Double_t Sin2Theta = 1.0 - CosTheta*CosTheta;
+  TComplex f1 = F1(CosTheta);
+  TComplex f2 = F2(CosTheta);
+  TComplex f3 = F3(CosTheta);
+  TComplex f4 = F4(CosTheta);
+  TComplex f1cc = TComplex::Conjugate(f1); //F1cc(CosTheta);
+  TComplex f2cc = TComplex::Conjugate(f2); //F2cc(CosTheta);
+  TComplex f3cc = TComplex::Conjugate(f3); //F3cc(CosTheta);
+
+  TComplex Complex = 2.0*f1cc*f2 - CosTheta*(f1.Rho2() + f2.Rho2())
+                   + Sin2Theta*(f1cc*f3 + f2cc*f4 + f3cc*f4)
+                   + 0.5*CosTheta*Sin2Theta*(f3.Rho2() + f4.Rho2());
+  return Complex.Re()*rho(Omega)*UNIT;
+}
+
+//-----------------------------------------------------------------------------
+
+inline Double_t sigmaTx(Double_t Theta, Double_t Omega)
+{
+  Double_t CosTheta = Cos(Theta*DegToRad());
+  Double_t Sin2Theta = 1.0 - CosTheta*CosTheta;
+  TComplex f3 = F3(CosTheta);
+  TComplex f4 = F4(CosTheta);
+  TComplex f1cc = F1cc(CosTheta);
+  TComplex f2cc = F2cc(CosTheta);
+  TComplex f3cc = TComplex::Conjugate(f3); //F3cc(CosTheta);
+
+  TComplex Complex = f1cc*f3 + f2cc*f4 + f3cc*f4 + 0.5*CosTheta*(f3.Rho2() + f4.Rho2());
+  return -Sin2Theta*Complex.Re()*rho(Omega)*UNIT;
+}
+
+//-----------------------------------------------------------------------------
+
+inline Double_t sigmaTz(Double_t Theta, Double_t Omega)
+{
+  Double_t SinTheta = Sin(Theta*DegToRad());
+  Double_t CosTheta = Cos(Theta*DegToRad());
+  Double_t Sin2Theta = SinTheta*SinTheta;
+  TComplex f3 = F3(CosTheta);
+  TComplex f4 = F4(CosTheta);
+  TComplex f1cc = F1cc(CosTheta);
+  TComplex f2cc = F2cc(CosTheta);
+
+  TComplex Complex = f1cc*f4 - f2cc*f3 + CosTheta*(f1cc*f3 - f2cc*f4)
+                   + 0.5*Sin2Theta*(f4.Rho2() - f3.Rho2());
+  return SinTheta*Complex.Re()*rho(Omega)*UNIT;
 }
 
 //-----------------------------------------------------------------------------
@@ -504,6 +700,34 @@ inline Double_t Ox(Double_t Theta, Double_t Omega)
 inline Double_t Oz(Double_t Theta, Double_t Omega)
 {
   return sigmaOz(Theta, Omega)/sigma0(Theta, Omega);
+}
+
+//-----------------------------------------------------------------------------
+
+inline Double_t Lx(Double_t Theta, Double_t Omega)
+{
+  return sigmaLx(Theta, Omega)/sigma0(Theta, Omega);
+}
+
+//-----------------------------------------------------------------------------
+
+inline Double_t Lz(Double_t Theta, Double_t Omega)
+{
+  return sigmaLz(Theta, Omega)/sigma0(Theta, Omega);
+}
+
+//-----------------------------------------------------------------------------
+
+inline Double_t Tx(Double_t Theta, Double_t Omega)
+{
+  return sigmaTx(Theta, Omega)/sigma0(Theta, Omega);
+}
+
+//-----------------------------------------------------------------------------
+
+inline Double_t Tz(Double_t Theta, Double_t Omega)
+{
+  return sigmaTz(Theta, Omega)/sigma0(Theta, Omega);
 }
 
 //-----------------------------------------------------------------------------

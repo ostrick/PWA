@@ -116,12 +116,8 @@ void Multipole(Char_t* Mlp, Int_t SolLo=0, Int_t SolHi=0, Bool_t W=true, Bool_t 
   Double_t ModRe[N_MAX];
   Double_t ModIm[N_MAX];
   Double_t ModEn[N_MAX];
-  Double_t TrueRe[N_MAX];
-  Double_t TrueIm[N_MAX];
-  Double_t TrueEn[N_MAX];
   Int_t PloPts[SOL];
   Int_t ModPts = 0;
-  Int_t TruePts = 0;
   Double_t En, Re, DRe, Im, DIm;
   Double_t Min = 0.0;
   Double_t Max = 0.0;
@@ -129,8 +125,6 @@ void Multipole(Char_t* Mlp, Int_t SolLo=0, Int_t SolHi=0, Bool_t W=true, Bool_t 
   TGraphErrors* PlotIm[SOL];
   TGraph* ModelRe;
   TGraph* ModelIm;
-  TGraph* TRUERe;
-  TGraph* TRUEIm;
 
   for(Int_t s=SolLo; s<SolHi+1; s++)
   {
@@ -204,8 +198,6 @@ void Multipole(Char_t* Mlp, Int_t SolLo=0, Int_t SolHi=0, Bool_t W=true, Bool_t 
     PlotIm[s]->Draw("PZ");  //Plot with points and small error bars, into existing frame
   }
 
-
-  //*************************startvalue****************************************
   //Open text file with model values for given multipole
   sprintf(Buffer, "model/%s.txt", Mlp);
   sscanf(Mlp, "%c%d%c", &M, &l, &p);
@@ -259,67 +251,6 @@ void Multipole(Char_t* Mlp, Int_t SolLo=0, Int_t SolHi=0, Bool_t W=true, Bool_t 
   //Plot graphs
   ModelRe->Draw("L"); //Plot as line, into same frame
   ModelIm->Draw("L"); //Plot as line, into same frame
-
-
-
-//*************************true value****************************************
-  //Open text file with model values for given multipole
-  sprintf(Buffer, "true/%s.txt", Mlp);
-  sscanf(Mlp, "%c%d%c", &M, &l, &p);
-  if((l==2) && (D_WAVES==BORN))   sprintf(Buffer, "true/%s_Born.txt", Mlp);
-  if((l==2) && (D_WAVES==NONRES)) sprintf(Buffer, "true/%s_BornRhoOmega.txt", Mlp);
-  InModel = fopen(Buffer, "r");
-
-  //Skip two lines with table header
-  fgets(Buffer, sizeof(Buffer), InModel);
-  fgets(Buffer, sizeof(Buffer), InModel);
-  //Read multipole model values from file
-  while(!feof(InModel))
-  {
-    if(fscanf(InModel, "%lf %lf %lf", &En, &Re, &Im)==3)
-    {
-      //Look for maximum & minimum of values to adjust plotting range
-      if(Re > Max) Max = Re;
-      if(Im > Max) Max = Im;
-      if(Re < Min) Min = Re;
-      if(Im < Min) Min = Im;
-      //Plot against either center-of-mass energy W or beam energy omega
-      if(!W) En = (En*En - MASS2_INITIAL)/(2.0*MASS_INITIAL);
-      //Add real and imaginary parts of multipole to graph
-      TrueEn[TruePts] = En;
-      TrueRe[TruePts] = Re;
-      TrueIm[TruePts] = Im;
-      TruePts++;
-    }
-  }
-  //Close file with model values
-  fclose(InModel);
-
-  //Create graphs for real and imaginary parts of model multipole
-  TRUERe = new TGraph(TruePts, TrueEn, TrueRe);
-  TRUEIm = new TGraph(TruePts, TrueEn, TrueIm);
-
-  //Color, line size adjustments
-  TRUERe->SetLineColor(kRed);
-  TRUEIm->SetLineColor(kBlue);
-  TRUERe->SetLineWidth(2);
-  TRUEIm->SetLineWidth(2);
-  TRUERe->SetLineStyle(2);
-  TRUEIm->SetLineStyle(2);
-
-  //Set plot titles and object names
-  TRUERe->SetTitle(Mlp);
-  TRUEIm->SetTitle(Mlp);
-  sprintf(Buffer, "Re%s_model", Mlp);
-  TRUERe->SetName(Buffer);
-  sprintf(Buffer, "Im%s_model", Mlp);
-  TRUEIm->SetName(Buffer);
-
-  //Plot graphs
-  TRUERe->Draw("L"); //Plot as line, into same frame
-  TRUEIm->Draw("L"); //Plot as line, into same frame
-
-  //*************************************************************
 
   //Adjust drawing ranges for y-axis
   if((Lo==0.0) && (Hi==0.0))
@@ -808,9 +739,6 @@ void Chi2(Int_t SOLUTION=0, Double_t MASS_INITIAL=938.2720)
   Chi2GraphW->SetName("Chi2");
   Chi2GraphW->SetTitle("Chi2");
   Chi2GraphW->Draw("APZ");
-
-  sprintf(Buffer, "plots.%d/Chi2.pdf", SOLUTION);
-  Canvas->SaveAs(Buffer);
 }
 
 //-----------------------------------------------------------------------------

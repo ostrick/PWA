@@ -14,6 +14,10 @@
 #include "Provide_sgCz.h"
 #include "Provide_sgOx.h"
 #include "Provide_sgOz.h"
+#include "Provide_sgLx.h"
+#include "Provide_sgLz.h"
+#include "Provide_sgTx.h"
+#include "Provide_sgTz.h"
 #include "Provide_S.h"
 #include "Provide_T.h"
 #include "Provide_P.h"
@@ -25,7 +29,12 @@
 #include "Provide_Cz.h"
 #include "Provide_Ox.h"
 #include "Provide_Oz.h"
+#include "Provide_Lx.h"
+#include "Provide_Lz.h"
+#include "Provide_Tx.h"
+#include "Provide_Tz.h"
 #include "Parse_MAID.h"
+#include "Parse_HELI.h"
 #include "PWA.h"
 #include "Version.h"
 #include "Build.h"
@@ -291,21 +300,6 @@ void Print()
            ChiSq(), Penalty(), Scale(), NPts(), NPar(), NDF());
     printf("------------------------------------------------------------------------------------\n");
   }
-
-  //FILE* sg0_out = fopen("sg0_model.txt", "a");
-  //fprintf(sg0_out, "E = %8.3f MeV\n", gEnergy);
-  //Ep[0] = maid_Ep[0][eM];
-  //Ep[1] = maid_Ep[1][eM];
-  //Mp[1] = maid_Mp[1][eM];
-  //Mm[1] = maid_Mm[1][eM];
-  //Ep[2] = maid_Ep[2][eM];
-  //Em[2] = maid_Em[2][eM];
-  //Mp[2] = maid_Mp[2][eM];
-  //Mm[2] = maid_Mm[2][eM];
-  //for(Int_t t=0; t<18; t++)
-  //  fprintf(sg0_out, "%7.3f  %10.6f\n", 10.0*t+5.0, sigma0(10.0*t+5.0, gEnergy));
-  //fprintf(sg0_out, "--------------------\n");
-  //fclose(sg0_out);
 }
 
 //-----------------------------------------------------------------------------
@@ -324,6 +318,21 @@ void PWA()
   { sgX_en = sgT_en; sgX_pts = sgT_pts; sgX_bin = sgT_bin; }
   else
   { sgX_en = sg0_en; sgX_pts = sg0_pts; sgX_bin = sg0_bin; }
+
+
+  // intitalize previous multipoles for first iteration
+  gEnergy = MIN_ENERGY;
+  Int_t e0 = GetEnergyBin_maid();
+
+  for(Int_t l=0; l<L_MAX+1; l++)
+    {
+      Ep_prev[l]=maid_Ep[l][e0];
+      Mp_prev[l]=maid_Mp[l][e0];
+      Em_prev[l]=maid_Em[l][e0];      
+      Mm_prev[l]=maid_Mm[l][e0];
+    }
+
+
 
   //Perform single energy fits for each energy point of 'master' observable (sgT or sg0)
   for(Int_t eX=0; eX<sgX_bin; eX++)
@@ -347,6 +356,29 @@ void PWA()
     for(Int_t s=0; s<SOLUTIONS; s++) Plot(s);
   }
   printf("\n");
+  return;
+
+  //Calculate and print model predictions for observables
+  for(Int_t eX=0; eX<sgX_bin; eX++)
+  {
+    gEnergy = sgX_en[eX];
+    if(gEnergy > 190.0) break;
+    Int_t bin = GetEnergyBin_maid();
+    for(Int_t l=0; l<L_MAX+1; l++)
+    {
+      Ep[l] = maid_Ep[l][bin];
+      Em[l] = maid_Em[l][bin];
+      Mp[l] = maid_Mp[l][bin];
+      Mm[l] = maid_Mm[l][bin];
+    }
+    //Old format
+    printf("E =  %7.3f MeV, Wght = 1.00, Syst = 0.000000\n", maid_en[bin]);
+    //New format
+    //printf("E = %8.3f MeV, E_lo = %8.3f MeV, E_hi = %8.3f MeV\nSystematic = 0.000000, Preliminary = 0, MODEL_PREDICTION\n", maid_en[bin], maid_en[bin], maid_en[bin]);
+    for(Double_t t=5.0; t<180.0; t+=10.0)
+      printf("%5.1f  %10.6f  0.0000005  0.000000\n", t, sigmaF(t, maid_en[bin]));
+    printf("------------------------------------------------------------\n");
+  }
 }
 
 //-----------------------------------------------------------------------------
@@ -385,7 +417,7 @@ void Init()
   L_MAX           = 2;
   PENALTY[MLP1]   = 1.0;
   PENALTY[MLP2]   = 1.0;
-  for(Int_t i=1; i<5; i++) WEIGHT[i] = 1.0;
+  for(Int_t i=1; i<9; i++) WEIGHT[i] = 1.0;
   SCALING         = 0.1;
   MIN_ENERGY      = 144.7;
   MAX_ENERGY      = 420.0;
@@ -433,7 +465,7 @@ void Init()
     if(sscanf(Buffer, "USE_PRELIMINARY %d", &Bool)==1) USE_PRELIMINARY = Bool;
     if(sscanf(Buffer, "PENALTY_MLP1 %lf", &Double)==1) PENALTY[MLP1] = Double;
     if(sscanf(Buffer, "PENALTY_MLP2 %lf", &Double)==1) PENALTY[MLP2] = Double;
-    if(sscanf(Buffer, "WEIGHT_A%d %lf", &Int, &Double)==2) WEIGHT[Int] = Double;
+    if(sscanf(Buffer, "WEIGHT_Y%d %lf", &Int, &Double)==2) WEIGHT[Int] = Double;
     if(sscanf(Buffer, "SCALING %lf", &Double)==1) SCALING = Double;
     if(sscanf(Buffer, "BETA %lf", &Double)==1) BETA = Double;
     if(sscanf(Buffer, "VARIATION_REL %lf", &Double)==1) VARIATION[REL] = Double;
@@ -545,7 +577,8 @@ void Init()
   printf("SGT_ENERGIES %1d\n", SGT_ENERGIES);
   printf("PENALTY_MLP1 %6.3f\n", PENALTY[MLP1]);
   printf("PENALTY_MLP2 %6.3f\n", PENALTY[MLP2]);
-  for(Int_t i=1; i<5; i++) printf("WEIGHT_A%d %6.3f\n", i, WEIGHT[i]);
+  for(Int_t i=1; i<9; i++)
+    if((i!=5) && (i!=7)) printf("WEIGHT_Y%d %6.3f\n", i, WEIGHT[i]);
   printf("SCALING %6.3f\n", SCALING);
   printf("ERROR_MODE %1d\n", ERROR_MODE);
   printf("PENALTY_MODE %1d\n", PENALTY_MODE);
@@ -556,9 +589,9 @@ void Init()
   printf("BETA %4.2f\n", BETA);
   printf("VARIATION_REL %5.3f\n", VARIATION[REL]);
   printf("VARIATION_ABS %5.3f\n", VARIATION[ABS]);
-  printf("MASS_MESON %5.3f\n", MASS_MESON);
-  printf("MASS_INITIAL %5.3f\n", MASS_INITIAL);
-  printf("MASS_FINAL %5.3f\n", MASS_FINAL);
+  printf("MASS_MESON %8.3f\n", MASS_MESON);
+  printf("MASS_INITIAL %8.3f\n", MASS_INITIAL);
+  printf("MASS_FINAL %8.3f\n", MASS_FINAL);
   printf("------------------------------------------------------------------------------------\n");
 
   //Create output directories for all selected solutions
@@ -609,6 +642,10 @@ void Load()
     if(sscanf(Buffer, "SGCZ_FILE %s %lf %lf", Filename, &Weight, &Scale)==3) Load_sgCz(Filename, Weight, Scale);
     if(sscanf(Buffer, "SGOX_FILE %s %lf %lf", Filename, &Weight, &Scale)==3) Load_sgOx(Filename, Weight, Scale);
     if(sscanf(Buffer, "SGOZ_FILE %s %lf %lf", Filename, &Weight, &Scale)==3) Load_sgOz(Filename, Weight, Scale);
+    if(sscanf(Buffer, "SGLX_FILE %s %lf %lf", Filename, &Weight, &Scale)==3) Load_sgLx(Filename, Weight, Scale);
+    if(sscanf(Buffer, "SGLZ_FILE %s %lf %lf", Filename, &Weight, &Scale)==3) Load_sgLz(Filename, Weight, Scale);
+    if(sscanf(Buffer, "SGTX_FILE %s %lf %lf", Filename, &Weight, &Scale)==3) Load_sgTx(Filename, Weight, Scale);
+    if(sscanf(Buffer, "SGTZ_FILE %s %lf %lf", Filename, &Weight, &Scale)==3) Load_sgTz(Filename, Weight, Scale);
 
     if(sscanf(Buffer, "S_FILE %s %lf %lf",    Filename, &Weight, &Scale)==3) Load_S(Filename,  Weight, Scale);
     if(sscanf(Buffer, "T_FILE %s %lf %lf",    Filename, &Weight, &Scale)==3) Load_T(Filename,  Weight, Scale);
@@ -621,8 +658,13 @@ void Load()
     if(sscanf(Buffer, "CZ_FILE %s %lf %lf",   Filename, &Weight, &Scale)==3) Load_Cz(Filename, Weight, Scale);
     if(sscanf(Buffer, "OX_FILE %s %lf %lf",   Filename, &Weight, &Scale)==3) Load_Ox(Filename, Weight, Scale);
     if(sscanf(Buffer, "OZ_FILE %s %lf %lf",   Filename, &Weight, &Scale)==3) Load_Oz(Filename, Weight, Scale);
+    if(sscanf(Buffer, "LX_FILE %s %lf %lf",   Filename, &Weight, &Scale)==3) Load_Lx(Filename, Weight, Scale);
+    if(sscanf(Buffer, "LZ_FILE %s %lf %lf",   Filename, &Weight, &Scale)==3) Load_Lz(Filename, Weight, Scale);
+    if(sscanf(Buffer, "TX_FILE %s %lf %lf",   Filename, &Weight, &Scale)==3) Load_Tx(Filename, Weight, Scale);
+    if(sscanf(Buffer, "TZ_FILE %s %lf %lf",   Filename, &Weight, &Scale)==3) Load_Tz(Filename, Weight, Scale);
 
     if(sscanf(Buffer, "MODEL_PATH %s", Pathname)==1) Parse_MAID(Pathname);
+    if(sscanf(Buffer, "MODEL_PATH %s", Pathname)==1) Parse_HELI(Pathname);
   }
   fclose(Config);
   return;
@@ -652,25 +694,6 @@ int main(int argc, char **argv)
   Init();
   Load();
   PWA();
-
-  //for(Int_t e=0; e<maid_bin; e++)
-  //{
-  //  gEnergy = maid_en[e];
-  //  if(gEnergy > 190.0) exit(0);
-  //  Int_t bin = GetEnergyBin_maid();
-  //  for(Int_t l=0; l<3; l++)
-  //  {
-  //    Ep[l] = maid_Ep[l][bin];
-  //    Em[l] = maid_Em[l][bin];
-  //    Mp[l] = maid_Mp[l][bin];
-  //    Mm[l] = maid_Mm[l][bin];
-  //  }
-  //  printf("E =  %7.3f MeV, Wght = 1.00, Syst = 0.000000\n", maid_en[e]);
-  //  for(Double_t t=5.0; t<180.0; t+=10.0)
-  //    //printf("%f %f 0.0000005 0.000000\n", t, sigmaT(t, maid_en[e]));
-  //    printf("%f %f 0.0000005 0.000000\n", t, sigmaF(t, maid_en[e]));
-  //  printf("-----------------------------------------------------\n");
-  //}
 }
 
 //-----------------------------------------------------------------------------

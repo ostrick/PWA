@@ -102,8 +102,8 @@ Double_t GetChiSq_sgOx()
     for(Int_t th=0; th<sgOx_pts[eOx[n]]; th++) //Process all data points in current bin
     {
       Theta = sgOx_th[eOx[n]][th];
-      Meas  = sgOx_sc[eOx[n]]*sgOx_val[eOx[n]][th]*f_obs[SIG_0];
-      Error = sgOx_sc[eOx[n]]*sgOx_err[eOx[n]][th]*f_obs[SIG_0];
+      Meas  = sgOx_sc[eOx[n]]*sgOx_val[eOx[n]][th]*f_obs[SIG_OX];
+      Error = sgOx_sc[eOx[n]]*sgOx_err[eOx[n]][th]*f_obs[SIG_OX];
       Theo  = sigmaOx(Theta, Omega);
       //printf("sgOx: %f: %f %f  = %f\n", Theta, Theo, Meas, Theo/Meas);
       ChiSq_sgOx+=(sgOx_wt[eOx[n]]*((Meas-Theo)*(Meas-Theo)/(Error*Error)));
@@ -131,7 +131,10 @@ void Sort_sgOx(Int_t l, Int_t r) //Quicksort implementation on sgOx data arrays
      Swap(&sgOx_hi[i],  &sgOx_hi[j]);
      Swap(&sgOx_wt[i],  &sgOx_wt[j]);
      Swap(&sgOx_sy[i],  &sgOx_sy[j]);
+     Swap(&sgOx_sc[i],  &sgOx_sc[j]);
      Swap(&sgOx_pts[i], &sgOx_pts[j]);
+     Swap(&sgOx_pre[i], &sgOx_pre[j]);
+     Swap(sgOx_id[i],   sgOx_id[j]);
      for(Int_t n=0; n<THBINS; n++)
      {
         Swap(&sgOx_val[i][n], &sgOx_val[j][n]);
@@ -145,7 +148,10 @@ void Sort_sgOx(Int_t l, Int_t r) //Quicksort implementation on sgOx data arrays
    Swap(&sgOx_hi[i],  &sgOx_hi[r]);
    Swap(&sgOx_wt[i],  &sgOx_wt[r]);
    Swap(&sgOx_sy[i],  &sgOx_sy[r]);
+   Swap(&sgOx_sc[i],  &sgOx_sc[r]);
    Swap(&sgOx_pts[i], &sgOx_pts[r]);
+   Swap(&sgOx_pre[i], &sgOx_pre[r]);
+   Swap(sgOx_id[i],   sgOx_id[r]);
    for(Int_t n=0; n<THBINS; n++)
    {
       Swap(&sgOx_val[i][n], &sgOx_val[r][n]);
@@ -168,7 +174,7 @@ Double_t GetScale_sgOx()
   Int_t nOx = GetEnergyBins_sgOx(eOx); //Get list of all energy bins covering given global energy
 
   for(Int_t n=0; n<nOx; n++) //Process all found bins
-    Scale_sgOx+=(1.0*sgOx_pts[eOx[n]])*(f_obs[SIG_0]-1.0)*(f_obs[SIG_0]-1.0)/(sgOx_sy[eOx[n]]*sgOx_sy[eOx[n]]);
+    Scale_sgOx+=(f_obs[SIG_OX]-1.0)*(f_obs[SIG_OX]-1.0)*sgOx_pts[eOx[n]]/(sgOx_sy[eOx[n]]*sgOx_sy[eOx[n]]);
 
   return Scale_sgOx;
 }

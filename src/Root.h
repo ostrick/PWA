@@ -1,7 +1,6 @@
 #include "TROOT.h"
 #include "TMath.h"
 #include "TH1F.h"
-#include "TF1.h"
 #include "TGraph.h"
 #include "TGraphErrors.h"
 #include "TMinuit.h"

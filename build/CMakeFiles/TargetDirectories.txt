@@ -1,0 +1,3 @@
+/home/ostrick/PWA/build/CMakeFiles/Build.dir
+/home/ostrick/PWA/build/CMakeFiles/IncreaseBuild.dir
+/home/ostrick/PWA/build/CMakeFiles/PWA.dir

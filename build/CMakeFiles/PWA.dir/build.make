@@ -49,32 +49,78 @@ include CMakeFiles/PWA.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/PWA.dir/flags.make
 
-CMakeFiles/PWA.dir/src/Provide_E.cpp.o: CMakeFiles/PWA.dir/flags.make
-CMakeFiles/PWA.dir/src/Provide_E.cpp.o: ../src/Provide_E.cpp
+CMakeFiles/PWA.dir/src/Provide_Tz.cpp.o: CMakeFiles/PWA.dir/flags.make
+CMakeFiles/PWA.dir/src/Provide_Tz.cpp.o: ../src/Provide_Tz.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Provide_E.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Provide_E.cpp.o -c /home/ostrick/PWA/src/Provide_E.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Provide_Tz.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Provide_Tz.cpp.o -c /home/ostrick/PWA/src/Provide_Tz.cpp
 
-CMakeFiles/PWA.dir/src/Provide_E.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PWA.dir/src/Provide_E.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ostrick/PWA/src/Provide_E.cpp > CMakeFiles/PWA.dir/src/Provide_E.cpp.i
+CMakeFiles/PWA.dir/src/Provide_Tz.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PWA.dir/src/Provide_Tz.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ostrick/PWA/src/Provide_Tz.cpp > CMakeFiles/PWA.dir/src/Provide_Tz.cpp.i
 
-CMakeFiles/PWA.dir/src/Provide_E.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PWA.dir/src/Provide_E.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ostrick/PWA/src/Provide_E.cpp -o CMakeFiles/PWA.dir/src/Provide_E.cpp.s
+CMakeFiles/PWA.dir/src/Provide_Tz.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PWA.dir/src/Provide_Tz.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ostrick/PWA/src/Provide_Tz.cpp -o CMakeFiles/PWA.dir/src/Provide_Tz.cpp.s
 
-CMakeFiles/PWA.dir/src/Provide_E.cpp.o.requires:
-.PHONY : CMakeFiles/PWA.dir/src/Provide_E.cpp.o.requires
+CMakeFiles/PWA.dir/src/Provide_Tz.cpp.o.requires:
+.PHONY : CMakeFiles/PWA.dir/src/Provide_Tz.cpp.o.requires
 
-CMakeFiles/PWA.dir/src/Provide_E.cpp.o.provides: CMakeFiles/PWA.dir/src/Provide_E.cpp.o.requires
-	$(MAKE) -f CMakeFiles/PWA.dir/build.make CMakeFiles/PWA.dir/src/Provide_E.cpp.o.provides.build
-.PHONY : CMakeFiles/PWA.dir/src/Provide_E.cpp.o.provides
+CMakeFiles/PWA.dir/src/Provide_Tz.cpp.o.provides: CMakeFiles/PWA.dir/src/Provide_Tz.cpp.o.requires
+	$(MAKE) -f CMakeFiles/PWA.dir/build.make CMakeFiles/PWA.dir/src/Provide_Tz.cpp.o.provides.build
+.PHONY : CMakeFiles/PWA.dir/src/Provide_Tz.cpp.o.provides
 
-CMakeFiles/PWA.dir/src/Provide_E.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Provide_E.cpp.o
+CMakeFiles/PWA.dir/src/Provide_Tz.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Provide_Tz.cpp.o
+
+CMakeFiles/PWA.dir/src/Provide_sg0.cpp.o: CMakeFiles/PWA.dir/flags.make
+CMakeFiles/PWA.dir/src/Provide_sg0.cpp.o: ../src/Provide_sg0.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Provide_sg0.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Provide_sg0.cpp.o -c /home/ostrick/PWA/src/Provide_sg0.cpp
+
+CMakeFiles/PWA.dir/src/Provide_sg0.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PWA.dir/src/Provide_sg0.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ostrick/PWA/src/Provide_sg0.cpp > CMakeFiles/PWA.dir/src/Provide_sg0.cpp.i
+
+CMakeFiles/PWA.dir/src/Provide_sg0.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PWA.dir/src/Provide_sg0.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ostrick/PWA/src/Provide_sg0.cpp -o CMakeFiles/PWA.dir/src/Provide_sg0.cpp.s
+
+CMakeFiles/PWA.dir/src/Provide_sg0.cpp.o.requires:
+.PHONY : CMakeFiles/PWA.dir/src/Provide_sg0.cpp.o.requires
+
+CMakeFiles/PWA.dir/src/Provide_sg0.cpp.o.provides: CMakeFiles/PWA.dir/src/Provide_sg0.cpp.o.requires
+	$(MAKE) -f CMakeFiles/PWA.dir/build.make CMakeFiles/PWA.dir/src/Provide_sg0.cpp.o.provides.build
+.PHONY : CMakeFiles/PWA.dir/src/Provide_sg0.cpp.o.provides
+
+CMakeFiles/PWA.dir/src/Provide_sg0.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Provide_sg0.cpp.o
+
+CMakeFiles/PWA.dir/src/Provide_Cz.cpp.o: CMakeFiles/PWA.dir/flags.make
+CMakeFiles/PWA.dir/src/Provide_Cz.cpp.o: ../src/Provide_Cz.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Provide_Cz.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Provide_Cz.cpp.o -c /home/ostrick/PWA/src/Provide_Cz.cpp
+
+CMakeFiles/PWA.dir/src/Provide_Cz.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PWA.dir/src/Provide_Cz.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ostrick/PWA/src/Provide_Cz.cpp > CMakeFiles/PWA.dir/src/Provide_Cz.cpp.i
+
+CMakeFiles/PWA.dir/src/Provide_Cz.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PWA.dir/src/Provide_Cz.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ostrick/PWA/src/Provide_Cz.cpp -o CMakeFiles/PWA.dir/src/Provide_Cz.cpp.s
+
+CMakeFiles/PWA.dir/src/Provide_Cz.cpp.o.requires:
+.PHONY : CMakeFiles/PWA.dir/src/Provide_Cz.cpp.o.requires
+
+CMakeFiles/PWA.dir/src/Provide_Cz.cpp.o.provides: CMakeFiles/PWA.dir/src/Provide_Cz.cpp.o.requires
+	$(MAKE) -f CMakeFiles/PWA.dir/build.make CMakeFiles/PWA.dir/src/Provide_Cz.cpp.o.provides.build
+.PHONY : CMakeFiles/PWA.dir/src/Provide_Cz.cpp.o.provides
+
+CMakeFiles/PWA.dir/src/Provide_Cz.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Provide_Cz.cpp.o
 
 CMakeFiles/PWA.dir/src/Provide_Lz.cpp.o: CMakeFiles/PWA.dir/flags.make
 CMakeFiles/PWA.dir/src/Provide_Lz.cpp.o: ../src/Provide_Lz.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Provide_Lz.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Provide_Lz.cpp.o -c /home/ostrick/PWA/src/Provide_Lz.cpp
 
@@ -95,9 +141,262 @@ CMakeFiles/PWA.dir/src/Provide_Lz.cpp.o.provides: CMakeFiles/PWA.dir/src/Provide
 
 CMakeFiles/PWA.dir/src/Provide_Lz.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Provide_Lz.cpp.o
 
+CMakeFiles/PWA.dir/src/Provide_T.cpp.o: CMakeFiles/PWA.dir/flags.make
+CMakeFiles/PWA.dir/src/Provide_T.cpp.o: ../src/Provide_T.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Provide_T.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Provide_T.cpp.o -c /home/ostrick/PWA/src/Provide_T.cpp
+
+CMakeFiles/PWA.dir/src/Provide_T.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PWA.dir/src/Provide_T.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ostrick/PWA/src/Provide_T.cpp > CMakeFiles/PWA.dir/src/Provide_T.cpp.i
+
+CMakeFiles/PWA.dir/src/Provide_T.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PWA.dir/src/Provide_T.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ostrick/PWA/src/Provide_T.cpp -o CMakeFiles/PWA.dir/src/Provide_T.cpp.s
+
+CMakeFiles/PWA.dir/src/Provide_T.cpp.o.requires:
+.PHONY : CMakeFiles/PWA.dir/src/Provide_T.cpp.o.requires
+
+CMakeFiles/PWA.dir/src/Provide_T.cpp.o.provides: CMakeFiles/PWA.dir/src/Provide_T.cpp.o.requires
+	$(MAKE) -f CMakeFiles/PWA.dir/build.make CMakeFiles/PWA.dir/src/Provide_T.cpp.o.provides.build
+.PHONY : CMakeFiles/PWA.dir/src/Provide_T.cpp.o.provides
+
+CMakeFiles/PWA.dir/src/Provide_T.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Provide_T.cpp.o
+
+CMakeFiles/PWA.dir/src/Provide_sgF.cpp.o: CMakeFiles/PWA.dir/flags.make
+CMakeFiles/PWA.dir/src/Provide_sgF.cpp.o: ../src/Provide_sgF.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Provide_sgF.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Provide_sgF.cpp.o -c /home/ostrick/PWA/src/Provide_sgF.cpp
+
+CMakeFiles/PWA.dir/src/Provide_sgF.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PWA.dir/src/Provide_sgF.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ostrick/PWA/src/Provide_sgF.cpp > CMakeFiles/PWA.dir/src/Provide_sgF.cpp.i
+
+CMakeFiles/PWA.dir/src/Provide_sgF.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PWA.dir/src/Provide_sgF.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ostrick/PWA/src/Provide_sgF.cpp -o CMakeFiles/PWA.dir/src/Provide_sgF.cpp.s
+
+CMakeFiles/PWA.dir/src/Provide_sgF.cpp.o.requires:
+.PHONY : CMakeFiles/PWA.dir/src/Provide_sgF.cpp.o.requires
+
+CMakeFiles/PWA.dir/src/Provide_sgF.cpp.o.provides: CMakeFiles/PWA.dir/src/Provide_sgF.cpp.o.requires
+	$(MAKE) -f CMakeFiles/PWA.dir/build.make CMakeFiles/PWA.dir/src/Provide_sgF.cpp.o.provides.build
+.PHONY : CMakeFiles/PWA.dir/src/Provide_sgF.cpp.o.provides
+
+CMakeFiles/PWA.dir/src/Provide_sgF.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Provide_sgF.cpp.o
+
+CMakeFiles/PWA.dir/src/Fitter.cpp.o: CMakeFiles/PWA.dir/flags.make
+CMakeFiles/PWA.dir/src/Fitter.cpp.o: ../src/Fitter.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_7)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Fitter.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Fitter.cpp.o -c /home/ostrick/PWA/src/Fitter.cpp
+
+CMakeFiles/PWA.dir/src/Fitter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PWA.dir/src/Fitter.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ostrick/PWA/src/Fitter.cpp > CMakeFiles/PWA.dir/src/Fitter.cpp.i
+
+CMakeFiles/PWA.dir/src/Fitter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PWA.dir/src/Fitter.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ostrick/PWA/src/Fitter.cpp -o CMakeFiles/PWA.dir/src/Fitter.cpp.s
+
+CMakeFiles/PWA.dir/src/Fitter.cpp.o.requires:
+.PHONY : CMakeFiles/PWA.dir/src/Fitter.cpp.o.requires
+
+CMakeFiles/PWA.dir/src/Fitter.cpp.o.provides: CMakeFiles/PWA.dir/src/Fitter.cpp.o.requires
+	$(MAKE) -f CMakeFiles/PWA.dir/build.make CMakeFiles/PWA.dir/src/Fitter.cpp.o.provides.build
+.PHONY : CMakeFiles/PWA.dir/src/Fitter.cpp.o.provides
+
+CMakeFiles/PWA.dir/src/Fitter.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Fitter.cpp.o
+
+CMakeFiles/PWA.dir/src/Provide_Oz.cpp.o: CMakeFiles/PWA.dir/flags.make
+CMakeFiles/PWA.dir/src/Provide_Oz.cpp.o: ../src/Provide_Oz.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_8)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Provide_Oz.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Provide_Oz.cpp.o -c /home/ostrick/PWA/src/Provide_Oz.cpp
+
+CMakeFiles/PWA.dir/src/Provide_Oz.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PWA.dir/src/Provide_Oz.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ostrick/PWA/src/Provide_Oz.cpp > CMakeFiles/PWA.dir/src/Provide_Oz.cpp.i
+
+CMakeFiles/PWA.dir/src/Provide_Oz.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PWA.dir/src/Provide_Oz.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ostrick/PWA/src/Provide_Oz.cpp -o CMakeFiles/PWA.dir/src/Provide_Oz.cpp.s
+
+CMakeFiles/PWA.dir/src/Provide_Oz.cpp.o.requires:
+.PHONY : CMakeFiles/PWA.dir/src/Provide_Oz.cpp.o.requires
+
+CMakeFiles/PWA.dir/src/Provide_Oz.cpp.o.provides: CMakeFiles/PWA.dir/src/Provide_Oz.cpp.o.requires
+	$(MAKE) -f CMakeFiles/PWA.dir/build.make CMakeFiles/PWA.dir/src/Provide_Oz.cpp.o.provides.build
+.PHONY : CMakeFiles/PWA.dir/src/Provide_Oz.cpp.o.provides
+
+CMakeFiles/PWA.dir/src/Provide_Oz.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Provide_Oz.cpp.o
+
+CMakeFiles/PWA.dir/src/Parse_HELI.cpp.o: CMakeFiles/PWA.dir/flags.make
+CMakeFiles/PWA.dir/src/Parse_HELI.cpp.o: ../src/Parse_HELI.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_9)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Parse_HELI.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Parse_HELI.cpp.o -c /home/ostrick/PWA/src/Parse_HELI.cpp
+
+CMakeFiles/PWA.dir/src/Parse_HELI.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PWA.dir/src/Parse_HELI.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ostrick/PWA/src/Parse_HELI.cpp > CMakeFiles/PWA.dir/src/Parse_HELI.cpp.i
+
+CMakeFiles/PWA.dir/src/Parse_HELI.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PWA.dir/src/Parse_HELI.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ostrick/PWA/src/Parse_HELI.cpp -o CMakeFiles/PWA.dir/src/Parse_HELI.cpp.s
+
+CMakeFiles/PWA.dir/src/Parse_HELI.cpp.o.requires:
+.PHONY : CMakeFiles/PWA.dir/src/Parse_HELI.cpp.o.requires
+
+CMakeFiles/PWA.dir/src/Parse_HELI.cpp.o.provides: CMakeFiles/PWA.dir/src/Parse_HELI.cpp.o.requires
+	$(MAKE) -f CMakeFiles/PWA.dir/build.make CMakeFiles/PWA.dir/src/Parse_HELI.cpp.o.provides.build
+.PHONY : CMakeFiles/PWA.dir/src/Parse_HELI.cpp.o.provides
+
+CMakeFiles/PWA.dir/src/Parse_HELI.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Parse_HELI.cpp.o
+
+CMakeFiles/PWA.dir/src/PWA.cpp.o: CMakeFiles/PWA.dir/flags.make
+CMakeFiles/PWA.dir/src/PWA.cpp.o: ../src/PWA.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_10)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/PWA.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/PWA.cpp.o -c /home/ostrick/PWA/src/PWA.cpp
+
+CMakeFiles/PWA.dir/src/PWA.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PWA.dir/src/PWA.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ostrick/PWA/src/PWA.cpp > CMakeFiles/PWA.dir/src/PWA.cpp.i
+
+CMakeFiles/PWA.dir/src/PWA.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PWA.dir/src/PWA.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ostrick/PWA/src/PWA.cpp -o CMakeFiles/PWA.dir/src/PWA.cpp.s
+
+CMakeFiles/PWA.dir/src/PWA.cpp.o.requires:
+.PHONY : CMakeFiles/PWA.dir/src/PWA.cpp.o.requires
+
+CMakeFiles/PWA.dir/src/PWA.cpp.o.provides: CMakeFiles/PWA.dir/src/PWA.cpp.o.requires
+	$(MAKE) -f CMakeFiles/PWA.dir/build.make CMakeFiles/PWA.dir/src/PWA.cpp.o.provides.build
+.PHONY : CMakeFiles/PWA.dir/src/PWA.cpp.o.provides
+
+CMakeFiles/PWA.dir/src/PWA.cpp.o.provides.build: CMakeFiles/PWA.dir/src/PWA.cpp.o
+
+CMakeFiles/PWA.dir/src/Provide_sgCx.cpp.o: CMakeFiles/PWA.dir/flags.make
+CMakeFiles/PWA.dir/src/Provide_sgCx.cpp.o: ../src/Provide_sgCx.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_11)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Provide_sgCx.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Provide_sgCx.cpp.o -c /home/ostrick/PWA/src/Provide_sgCx.cpp
+
+CMakeFiles/PWA.dir/src/Provide_sgCx.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PWA.dir/src/Provide_sgCx.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ostrick/PWA/src/Provide_sgCx.cpp > CMakeFiles/PWA.dir/src/Provide_sgCx.cpp.i
+
+CMakeFiles/PWA.dir/src/Provide_sgCx.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PWA.dir/src/Provide_sgCx.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ostrick/PWA/src/Provide_sgCx.cpp -o CMakeFiles/PWA.dir/src/Provide_sgCx.cpp.s
+
+CMakeFiles/PWA.dir/src/Provide_sgCx.cpp.o.requires:
+.PHONY : CMakeFiles/PWA.dir/src/Provide_sgCx.cpp.o.requires
+
+CMakeFiles/PWA.dir/src/Provide_sgCx.cpp.o.provides: CMakeFiles/PWA.dir/src/Provide_sgCx.cpp.o.requires
+	$(MAKE) -f CMakeFiles/PWA.dir/build.make CMakeFiles/PWA.dir/src/Provide_sgCx.cpp.o.provides.build
+.PHONY : CMakeFiles/PWA.dir/src/Provide_sgCx.cpp.o.provides
+
+CMakeFiles/PWA.dir/src/Provide_sgCx.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Provide_sgCx.cpp.o
+
+CMakeFiles/PWA.dir/src/Provide_sgOz.cpp.o: CMakeFiles/PWA.dir/flags.make
+CMakeFiles/PWA.dir/src/Provide_sgOz.cpp.o: ../src/Provide_sgOz.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_12)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Provide_sgOz.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Provide_sgOz.cpp.o -c /home/ostrick/PWA/src/Provide_sgOz.cpp
+
+CMakeFiles/PWA.dir/src/Provide_sgOz.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PWA.dir/src/Provide_sgOz.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ostrick/PWA/src/Provide_sgOz.cpp > CMakeFiles/PWA.dir/src/Provide_sgOz.cpp.i
+
+CMakeFiles/PWA.dir/src/Provide_sgOz.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PWA.dir/src/Provide_sgOz.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ostrick/PWA/src/Provide_sgOz.cpp -o CMakeFiles/PWA.dir/src/Provide_sgOz.cpp.s
+
+CMakeFiles/PWA.dir/src/Provide_sgOz.cpp.o.requires:
+.PHONY : CMakeFiles/PWA.dir/src/Provide_sgOz.cpp.o.requires
+
+CMakeFiles/PWA.dir/src/Provide_sgOz.cpp.o.provides: CMakeFiles/PWA.dir/src/Provide_sgOz.cpp.o.requires
+	$(MAKE) -f CMakeFiles/PWA.dir/build.make CMakeFiles/PWA.dir/src/Provide_sgOz.cpp.o.provides.build
+.PHONY : CMakeFiles/PWA.dir/src/Provide_sgOz.cpp.o.provides
+
+CMakeFiles/PWA.dir/src/Provide_sgOz.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Provide_sgOz.cpp.o
+
+CMakeFiles/PWA.dir/src/Provide_E.cpp.o: CMakeFiles/PWA.dir/flags.make
+CMakeFiles/PWA.dir/src/Provide_E.cpp.o: ../src/Provide_E.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_13)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Provide_E.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Provide_E.cpp.o -c /home/ostrick/PWA/src/Provide_E.cpp
+
+CMakeFiles/PWA.dir/src/Provide_E.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PWA.dir/src/Provide_E.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ostrick/PWA/src/Provide_E.cpp > CMakeFiles/PWA.dir/src/Provide_E.cpp.i
+
+CMakeFiles/PWA.dir/src/Provide_E.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PWA.dir/src/Provide_E.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ostrick/PWA/src/Provide_E.cpp -o CMakeFiles/PWA.dir/src/Provide_E.cpp.s
+
+CMakeFiles/PWA.dir/src/Provide_E.cpp.o.requires:
+.PHONY : CMakeFiles/PWA.dir/src/Provide_E.cpp.o.requires
+
+CMakeFiles/PWA.dir/src/Provide_E.cpp.o.provides: CMakeFiles/PWA.dir/src/Provide_E.cpp.o.requires
+	$(MAKE) -f CMakeFiles/PWA.dir/build.make CMakeFiles/PWA.dir/src/Provide_E.cpp.o.provides.build
+.PHONY : CMakeFiles/PWA.dir/src/Provide_E.cpp.o.provides
+
+CMakeFiles/PWA.dir/src/Provide_E.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Provide_E.cpp.o
+
+CMakeFiles/PWA.dir/src/Provide_sgCz.cpp.o: CMakeFiles/PWA.dir/flags.make
+CMakeFiles/PWA.dir/src/Provide_sgCz.cpp.o: ../src/Provide_sgCz.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_14)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Provide_sgCz.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Provide_sgCz.cpp.o -c /home/ostrick/PWA/src/Provide_sgCz.cpp
+
+CMakeFiles/PWA.dir/src/Provide_sgCz.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PWA.dir/src/Provide_sgCz.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ostrick/PWA/src/Provide_sgCz.cpp > CMakeFiles/PWA.dir/src/Provide_sgCz.cpp.i
+
+CMakeFiles/PWA.dir/src/Provide_sgCz.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PWA.dir/src/Provide_sgCz.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ostrick/PWA/src/Provide_sgCz.cpp -o CMakeFiles/PWA.dir/src/Provide_sgCz.cpp.s
+
+CMakeFiles/PWA.dir/src/Provide_sgCz.cpp.o.requires:
+.PHONY : CMakeFiles/PWA.dir/src/Provide_sgCz.cpp.o.requires
+
+CMakeFiles/PWA.dir/src/Provide_sgCz.cpp.o.provides: CMakeFiles/PWA.dir/src/Provide_sgCz.cpp.o.requires
+	$(MAKE) -f CMakeFiles/PWA.dir/build.make CMakeFiles/PWA.dir/src/Provide_sgCz.cpp.o.provides.build
+.PHONY : CMakeFiles/PWA.dir/src/Provide_sgCz.cpp.o.provides
+
+CMakeFiles/PWA.dir/src/Provide_sgCz.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Provide_sgCz.cpp.o
+
+CMakeFiles/PWA.dir/src/Provide_S.cpp.o: CMakeFiles/PWA.dir/flags.make
+CMakeFiles/PWA.dir/src/Provide_S.cpp.o: ../src/Provide_S.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_15)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Provide_S.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Provide_S.cpp.o -c /home/ostrick/PWA/src/Provide_S.cpp
+
+CMakeFiles/PWA.dir/src/Provide_S.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PWA.dir/src/Provide_S.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ostrick/PWA/src/Provide_S.cpp > CMakeFiles/PWA.dir/src/Provide_S.cpp.i
+
+CMakeFiles/PWA.dir/src/Provide_S.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PWA.dir/src/Provide_S.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ostrick/PWA/src/Provide_S.cpp -o CMakeFiles/PWA.dir/src/Provide_S.cpp.s
+
+CMakeFiles/PWA.dir/src/Provide_S.cpp.o.requires:
+.PHONY : CMakeFiles/PWA.dir/src/Provide_S.cpp.o.requires
+
+CMakeFiles/PWA.dir/src/Provide_S.cpp.o.provides: CMakeFiles/PWA.dir/src/Provide_S.cpp.o.requires
+	$(MAKE) -f CMakeFiles/PWA.dir/build.make CMakeFiles/PWA.dir/src/Provide_S.cpp.o.provides.build
+.PHONY : CMakeFiles/PWA.dir/src/Provide_S.cpp.o.provides
+
+CMakeFiles/PWA.dir/src/Provide_S.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Provide_S.cpp.o
+
 CMakeFiles/PWA.dir/src/Provide_sgTz.cpp.o: CMakeFiles/PWA.dir/flags.make
 CMakeFiles/PWA.dir/src/Provide_sgTz.cpp.o: ../src/Provide_sgTz.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_16)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Provide_sgTz.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Provide_sgTz.cpp.o -c /home/ostrick/PWA/src/Provide_sgTz.cpp
 
@@ -118,9 +417,32 @@ CMakeFiles/PWA.dir/src/Provide_sgTz.cpp.o.provides: CMakeFiles/PWA.dir/src/Provi
 
 CMakeFiles/PWA.dir/src/Provide_sgTz.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Provide_sgTz.cpp.o
 
+CMakeFiles/PWA.dir/src/Provide_sgT.cpp.o: CMakeFiles/PWA.dir/flags.make
+CMakeFiles/PWA.dir/src/Provide_sgT.cpp.o: ../src/Provide_sgT.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_17)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Provide_sgT.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Provide_sgT.cpp.o -c /home/ostrick/PWA/src/Provide_sgT.cpp
+
+CMakeFiles/PWA.dir/src/Provide_sgT.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PWA.dir/src/Provide_sgT.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ostrick/PWA/src/Provide_sgT.cpp > CMakeFiles/PWA.dir/src/Provide_sgT.cpp.i
+
+CMakeFiles/PWA.dir/src/Provide_sgT.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PWA.dir/src/Provide_sgT.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ostrick/PWA/src/Provide_sgT.cpp -o CMakeFiles/PWA.dir/src/Provide_sgT.cpp.s
+
+CMakeFiles/PWA.dir/src/Provide_sgT.cpp.o.requires:
+.PHONY : CMakeFiles/PWA.dir/src/Provide_sgT.cpp.o.requires
+
+CMakeFiles/PWA.dir/src/Provide_sgT.cpp.o.provides: CMakeFiles/PWA.dir/src/Provide_sgT.cpp.o.requires
+	$(MAKE) -f CMakeFiles/PWA.dir/build.make CMakeFiles/PWA.dir/src/Provide_sgT.cpp.o.provides.build
+.PHONY : CMakeFiles/PWA.dir/src/Provide_sgT.cpp.o.provides
+
+CMakeFiles/PWA.dir/src/Provide_sgT.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Provide_sgT.cpp.o
+
 CMakeFiles/PWA.dir/src/Provide_H.cpp.o: CMakeFiles/PWA.dir/flags.make
 CMakeFiles/PWA.dir/src/Provide_H.cpp.o: ../src/Provide_H.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_18)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Provide_H.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Provide_H.cpp.o -c /home/ostrick/PWA/src/Provide_H.cpp
 
@@ -143,7 +465,7 @@ CMakeFiles/PWA.dir/src/Provide_H.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Pr
 
 CMakeFiles/PWA.dir/src/Provide_G.cpp.o: CMakeFiles/PWA.dir/flags.make
 CMakeFiles/PWA.dir/src/Provide_G.cpp.o: ../src/Provide_G.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_19)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Provide_G.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Provide_G.cpp.o -c /home/ostrick/PWA/src/Provide_G.cpp
 
@@ -164,285 +486,9 @@ CMakeFiles/PWA.dir/src/Provide_G.cpp.o.provides: CMakeFiles/PWA.dir/src/Provide_
 
 CMakeFiles/PWA.dir/src/Provide_G.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Provide_G.cpp.o
 
-CMakeFiles/PWA.dir/src/Provide_F.cpp.o: CMakeFiles/PWA.dir/flags.make
-CMakeFiles/PWA.dir/src/Provide_F.cpp.o: ../src/Provide_F.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_6)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Provide_F.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Provide_F.cpp.o -c /home/ostrick/PWA/src/Provide_F.cpp
-
-CMakeFiles/PWA.dir/src/Provide_F.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PWA.dir/src/Provide_F.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ostrick/PWA/src/Provide_F.cpp > CMakeFiles/PWA.dir/src/Provide_F.cpp.i
-
-CMakeFiles/PWA.dir/src/Provide_F.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PWA.dir/src/Provide_F.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ostrick/PWA/src/Provide_F.cpp -o CMakeFiles/PWA.dir/src/Provide_F.cpp.s
-
-CMakeFiles/PWA.dir/src/Provide_F.cpp.o.requires:
-.PHONY : CMakeFiles/PWA.dir/src/Provide_F.cpp.o.requires
-
-CMakeFiles/PWA.dir/src/Provide_F.cpp.o.provides: CMakeFiles/PWA.dir/src/Provide_F.cpp.o.requires
-	$(MAKE) -f CMakeFiles/PWA.dir/build.make CMakeFiles/PWA.dir/src/Provide_F.cpp.o.provides.build
-.PHONY : CMakeFiles/PWA.dir/src/Provide_F.cpp.o.provides
-
-CMakeFiles/PWA.dir/src/Provide_F.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Provide_F.cpp.o
-
-CMakeFiles/PWA.dir/src/Provide_sgOz.cpp.o: CMakeFiles/PWA.dir/flags.make
-CMakeFiles/PWA.dir/src/Provide_sgOz.cpp.o: ../src/Provide_sgOz.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_7)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Provide_sgOz.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Provide_sgOz.cpp.o -c /home/ostrick/PWA/src/Provide_sgOz.cpp
-
-CMakeFiles/PWA.dir/src/Provide_sgOz.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PWA.dir/src/Provide_sgOz.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ostrick/PWA/src/Provide_sgOz.cpp > CMakeFiles/PWA.dir/src/Provide_sgOz.cpp.i
-
-CMakeFiles/PWA.dir/src/Provide_sgOz.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PWA.dir/src/Provide_sgOz.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ostrick/PWA/src/Provide_sgOz.cpp -o CMakeFiles/PWA.dir/src/Provide_sgOz.cpp.s
-
-CMakeFiles/PWA.dir/src/Provide_sgOz.cpp.o.requires:
-.PHONY : CMakeFiles/PWA.dir/src/Provide_sgOz.cpp.o.requires
-
-CMakeFiles/PWA.dir/src/Provide_sgOz.cpp.o.provides: CMakeFiles/PWA.dir/src/Provide_sgOz.cpp.o.requires
-	$(MAKE) -f CMakeFiles/PWA.dir/build.make CMakeFiles/PWA.dir/src/Provide_sgOz.cpp.o.provides.build
-.PHONY : CMakeFiles/PWA.dir/src/Provide_sgOz.cpp.o.provides
-
-CMakeFiles/PWA.dir/src/Provide_sgOz.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Provide_sgOz.cpp.o
-
-CMakeFiles/PWA.dir/src/Provide_sgLz.cpp.o: CMakeFiles/PWA.dir/flags.make
-CMakeFiles/PWA.dir/src/Provide_sgLz.cpp.o: ../src/Provide_sgLz.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_8)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Provide_sgLz.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Provide_sgLz.cpp.o -c /home/ostrick/PWA/src/Provide_sgLz.cpp
-
-CMakeFiles/PWA.dir/src/Provide_sgLz.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PWA.dir/src/Provide_sgLz.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ostrick/PWA/src/Provide_sgLz.cpp > CMakeFiles/PWA.dir/src/Provide_sgLz.cpp.i
-
-CMakeFiles/PWA.dir/src/Provide_sgLz.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PWA.dir/src/Provide_sgLz.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ostrick/PWA/src/Provide_sgLz.cpp -o CMakeFiles/PWA.dir/src/Provide_sgLz.cpp.s
-
-CMakeFiles/PWA.dir/src/Provide_sgLz.cpp.o.requires:
-.PHONY : CMakeFiles/PWA.dir/src/Provide_sgLz.cpp.o.requires
-
-CMakeFiles/PWA.dir/src/Provide_sgLz.cpp.o.provides: CMakeFiles/PWA.dir/src/Provide_sgLz.cpp.o.requires
-	$(MAKE) -f CMakeFiles/PWA.dir/build.make CMakeFiles/PWA.dir/src/Provide_sgLz.cpp.o.provides.build
-.PHONY : CMakeFiles/PWA.dir/src/Provide_sgLz.cpp.o.provides
-
-CMakeFiles/PWA.dir/src/Provide_sgLz.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Provide_sgLz.cpp.o
-
-CMakeFiles/PWA.dir/src/Provide_sgTx.cpp.o: CMakeFiles/PWA.dir/flags.make
-CMakeFiles/PWA.dir/src/Provide_sgTx.cpp.o: ../src/Provide_sgTx.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_9)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Provide_sgTx.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Provide_sgTx.cpp.o -c /home/ostrick/PWA/src/Provide_sgTx.cpp
-
-CMakeFiles/PWA.dir/src/Provide_sgTx.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PWA.dir/src/Provide_sgTx.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ostrick/PWA/src/Provide_sgTx.cpp > CMakeFiles/PWA.dir/src/Provide_sgTx.cpp.i
-
-CMakeFiles/PWA.dir/src/Provide_sgTx.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PWA.dir/src/Provide_sgTx.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ostrick/PWA/src/Provide_sgTx.cpp -o CMakeFiles/PWA.dir/src/Provide_sgTx.cpp.s
-
-CMakeFiles/PWA.dir/src/Provide_sgTx.cpp.o.requires:
-.PHONY : CMakeFiles/PWA.dir/src/Provide_sgTx.cpp.o.requires
-
-CMakeFiles/PWA.dir/src/Provide_sgTx.cpp.o.provides: CMakeFiles/PWA.dir/src/Provide_sgTx.cpp.o.requires
-	$(MAKE) -f CMakeFiles/PWA.dir/build.make CMakeFiles/PWA.dir/src/Provide_sgTx.cpp.o.provides.build
-.PHONY : CMakeFiles/PWA.dir/src/Provide_sgTx.cpp.o.provides
-
-CMakeFiles/PWA.dir/src/Provide_sgTx.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Provide_sgTx.cpp.o
-
-CMakeFiles/PWA.dir/src/Provide_sgG.cpp.o: CMakeFiles/PWA.dir/flags.make
-CMakeFiles/PWA.dir/src/Provide_sgG.cpp.o: ../src/Provide_sgG.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_10)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Provide_sgG.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Provide_sgG.cpp.o -c /home/ostrick/PWA/src/Provide_sgG.cpp
-
-CMakeFiles/PWA.dir/src/Provide_sgG.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PWA.dir/src/Provide_sgG.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ostrick/PWA/src/Provide_sgG.cpp > CMakeFiles/PWA.dir/src/Provide_sgG.cpp.i
-
-CMakeFiles/PWA.dir/src/Provide_sgG.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PWA.dir/src/Provide_sgG.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ostrick/PWA/src/Provide_sgG.cpp -o CMakeFiles/PWA.dir/src/Provide_sgG.cpp.s
-
-CMakeFiles/PWA.dir/src/Provide_sgG.cpp.o.requires:
-.PHONY : CMakeFiles/PWA.dir/src/Provide_sgG.cpp.o.requires
-
-CMakeFiles/PWA.dir/src/Provide_sgG.cpp.o.provides: CMakeFiles/PWA.dir/src/Provide_sgG.cpp.o.requires
-	$(MAKE) -f CMakeFiles/PWA.dir/build.make CMakeFiles/PWA.dir/src/Provide_sgG.cpp.o.provides.build
-.PHONY : CMakeFiles/PWA.dir/src/Provide_sgG.cpp.o.provides
-
-CMakeFiles/PWA.dir/src/Provide_sgG.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Provide_sgG.cpp.o
-
-CMakeFiles/PWA.dir/src/Fitter.cpp.o: CMakeFiles/PWA.dir/flags.make
-CMakeFiles/PWA.dir/src/Fitter.cpp.o: ../src/Fitter.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_11)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Fitter.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Fitter.cpp.o -c /home/ostrick/PWA/src/Fitter.cpp
-
-CMakeFiles/PWA.dir/src/Fitter.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PWA.dir/src/Fitter.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ostrick/PWA/src/Fitter.cpp > CMakeFiles/PWA.dir/src/Fitter.cpp.i
-
-CMakeFiles/PWA.dir/src/Fitter.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PWA.dir/src/Fitter.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ostrick/PWA/src/Fitter.cpp -o CMakeFiles/PWA.dir/src/Fitter.cpp.s
-
-CMakeFiles/PWA.dir/src/Fitter.cpp.o.requires:
-.PHONY : CMakeFiles/PWA.dir/src/Fitter.cpp.o.requires
-
-CMakeFiles/PWA.dir/src/Fitter.cpp.o.provides: CMakeFiles/PWA.dir/src/Fitter.cpp.o.requires
-	$(MAKE) -f CMakeFiles/PWA.dir/build.make CMakeFiles/PWA.dir/src/Fitter.cpp.o.provides.build
-.PHONY : CMakeFiles/PWA.dir/src/Fitter.cpp.o.provides
-
-CMakeFiles/PWA.dir/src/Fitter.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Fitter.cpp.o
-
-CMakeFiles/PWA.dir/src/Provide_sgOx.cpp.o: CMakeFiles/PWA.dir/flags.make
-CMakeFiles/PWA.dir/src/Provide_sgOx.cpp.o: ../src/Provide_sgOx.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_12)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Provide_sgOx.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Provide_sgOx.cpp.o -c /home/ostrick/PWA/src/Provide_sgOx.cpp
-
-CMakeFiles/PWA.dir/src/Provide_sgOx.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PWA.dir/src/Provide_sgOx.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ostrick/PWA/src/Provide_sgOx.cpp > CMakeFiles/PWA.dir/src/Provide_sgOx.cpp.i
-
-CMakeFiles/PWA.dir/src/Provide_sgOx.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PWA.dir/src/Provide_sgOx.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ostrick/PWA/src/Provide_sgOx.cpp -o CMakeFiles/PWA.dir/src/Provide_sgOx.cpp.s
-
-CMakeFiles/PWA.dir/src/Provide_sgOx.cpp.o.requires:
-.PHONY : CMakeFiles/PWA.dir/src/Provide_sgOx.cpp.o.requires
-
-CMakeFiles/PWA.dir/src/Provide_sgOx.cpp.o.provides: CMakeFiles/PWA.dir/src/Provide_sgOx.cpp.o.requires
-	$(MAKE) -f CMakeFiles/PWA.dir/build.make CMakeFiles/PWA.dir/src/Provide_sgOx.cpp.o.provides.build
-.PHONY : CMakeFiles/PWA.dir/src/Provide_sgOx.cpp.o.provides
-
-CMakeFiles/PWA.dir/src/Provide_sgOx.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Provide_sgOx.cpp.o
-
-CMakeFiles/PWA.dir/src/Provide_sg0.cpp.o: CMakeFiles/PWA.dir/flags.make
-CMakeFiles/PWA.dir/src/Provide_sg0.cpp.o: ../src/Provide_sg0.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_13)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Provide_sg0.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Provide_sg0.cpp.o -c /home/ostrick/PWA/src/Provide_sg0.cpp
-
-CMakeFiles/PWA.dir/src/Provide_sg0.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PWA.dir/src/Provide_sg0.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ostrick/PWA/src/Provide_sg0.cpp > CMakeFiles/PWA.dir/src/Provide_sg0.cpp.i
-
-CMakeFiles/PWA.dir/src/Provide_sg0.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PWA.dir/src/Provide_sg0.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ostrick/PWA/src/Provide_sg0.cpp -o CMakeFiles/PWA.dir/src/Provide_sg0.cpp.s
-
-CMakeFiles/PWA.dir/src/Provide_sg0.cpp.o.requires:
-.PHONY : CMakeFiles/PWA.dir/src/Provide_sg0.cpp.o.requires
-
-CMakeFiles/PWA.dir/src/Provide_sg0.cpp.o.provides: CMakeFiles/PWA.dir/src/Provide_sg0.cpp.o.requires
-	$(MAKE) -f CMakeFiles/PWA.dir/build.make CMakeFiles/PWA.dir/src/Provide_sg0.cpp.o.provides.build
-.PHONY : CMakeFiles/PWA.dir/src/Provide_sg0.cpp.o.provides
-
-CMakeFiles/PWA.dir/src/Provide_sg0.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Provide_sg0.cpp.o
-
-CMakeFiles/PWA.dir/src/Provide_P.cpp.o: CMakeFiles/PWA.dir/flags.make
-CMakeFiles/PWA.dir/src/Provide_P.cpp.o: ../src/Provide_P.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_14)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Provide_P.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Provide_P.cpp.o -c /home/ostrick/PWA/src/Provide_P.cpp
-
-CMakeFiles/PWA.dir/src/Provide_P.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PWA.dir/src/Provide_P.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ostrick/PWA/src/Provide_P.cpp > CMakeFiles/PWA.dir/src/Provide_P.cpp.i
-
-CMakeFiles/PWA.dir/src/Provide_P.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PWA.dir/src/Provide_P.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ostrick/PWA/src/Provide_P.cpp -o CMakeFiles/PWA.dir/src/Provide_P.cpp.s
-
-CMakeFiles/PWA.dir/src/Provide_P.cpp.o.requires:
-.PHONY : CMakeFiles/PWA.dir/src/Provide_P.cpp.o.requires
-
-CMakeFiles/PWA.dir/src/Provide_P.cpp.o.provides: CMakeFiles/PWA.dir/src/Provide_P.cpp.o.requires
-	$(MAKE) -f CMakeFiles/PWA.dir/build.make CMakeFiles/PWA.dir/src/Provide_P.cpp.o.provides.build
-.PHONY : CMakeFiles/PWA.dir/src/Provide_P.cpp.o.provides
-
-CMakeFiles/PWA.dir/src/Provide_P.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Provide_P.cpp.o
-
-CMakeFiles/PWA.dir/src/Provide_sgCx.cpp.o: CMakeFiles/PWA.dir/flags.make
-CMakeFiles/PWA.dir/src/Provide_sgCx.cpp.o: ../src/Provide_sgCx.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_15)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Provide_sgCx.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Provide_sgCx.cpp.o -c /home/ostrick/PWA/src/Provide_sgCx.cpp
-
-CMakeFiles/PWA.dir/src/Provide_sgCx.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PWA.dir/src/Provide_sgCx.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ostrick/PWA/src/Provide_sgCx.cpp > CMakeFiles/PWA.dir/src/Provide_sgCx.cpp.i
-
-CMakeFiles/PWA.dir/src/Provide_sgCx.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PWA.dir/src/Provide_sgCx.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ostrick/PWA/src/Provide_sgCx.cpp -o CMakeFiles/PWA.dir/src/Provide_sgCx.cpp.s
-
-CMakeFiles/PWA.dir/src/Provide_sgCx.cpp.o.requires:
-.PHONY : CMakeFiles/PWA.dir/src/Provide_sgCx.cpp.o.requires
-
-CMakeFiles/PWA.dir/src/Provide_sgCx.cpp.o.provides: CMakeFiles/PWA.dir/src/Provide_sgCx.cpp.o.requires
-	$(MAKE) -f CMakeFiles/PWA.dir/build.make CMakeFiles/PWA.dir/src/Provide_sgCx.cpp.o.provides.build
-.PHONY : CMakeFiles/PWA.dir/src/Provide_sgCx.cpp.o.provides
-
-CMakeFiles/PWA.dir/src/Provide_sgCx.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Provide_sgCx.cpp.o
-
-CMakeFiles/PWA.dir/src/Provide_Oz.cpp.o: CMakeFiles/PWA.dir/flags.make
-CMakeFiles/PWA.dir/src/Provide_Oz.cpp.o: ../src/Provide_Oz.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_16)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Provide_Oz.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Provide_Oz.cpp.o -c /home/ostrick/PWA/src/Provide_Oz.cpp
-
-CMakeFiles/PWA.dir/src/Provide_Oz.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PWA.dir/src/Provide_Oz.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ostrick/PWA/src/Provide_Oz.cpp > CMakeFiles/PWA.dir/src/Provide_Oz.cpp.i
-
-CMakeFiles/PWA.dir/src/Provide_Oz.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PWA.dir/src/Provide_Oz.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ostrick/PWA/src/Provide_Oz.cpp -o CMakeFiles/PWA.dir/src/Provide_Oz.cpp.s
-
-CMakeFiles/PWA.dir/src/Provide_Oz.cpp.o.requires:
-.PHONY : CMakeFiles/PWA.dir/src/Provide_Oz.cpp.o.requires
-
-CMakeFiles/PWA.dir/src/Provide_Oz.cpp.o.provides: CMakeFiles/PWA.dir/src/Provide_Oz.cpp.o.requires
-	$(MAKE) -f CMakeFiles/PWA.dir/build.make CMakeFiles/PWA.dir/src/Provide_Oz.cpp.o.provides.build
-.PHONY : CMakeFiles/PWA.dir/src/Provide_Oz.cpp.o.provides
-
-CMakeFiles/PWA.dir/src/Provide_Oz.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Provide_Oz.cpp.o
-
-CMakeFiles/PWA.dir/src/PWA.cpp.o: CMakeFiles/PWA.dir/flags.make
-CMakeFiles/PWA.dir/src/PWA.cpp.o: ../src/PWA.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_17)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/PWA.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/PWA.cpp.o -c /home/ostrick/PWA/src/PWA.cpp
-
-CMakeFiles/PWA.dir/src/PWA.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PWA.dir/src/PWA.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ostrick/PWA/src/PWA.cpp > CMakeFiles/PWA.dir/src/PWA.cpp.i
-
-CMakeFiles/PWA.dir/src/PWA.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PWA.dir/src/PWA.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ostrick/PWA/src/PWA.cpp -o CMakeFiles/PWA.dir/src/PWA.cpp.s
-
-CMakeFiles/PWA.dir/src/PWA.cpp.o.requires:
-.PHONY : CMakeFiles/PWA.dir/src/PWA.cpp.o.requires
-
-CMakeFiles/PWA.dir/src/PWA.cpp.o.provides: CMakeFiles/PWA.dir/src/PWA.cpp.o.requires
-	$(MAKE) -f CMakeFiles/PWA.dir/build.make CMakeFiles/PWA.dir/src/PWA.cpp.o.provides.build
-.PHONY : CMakeFiles/PWA.dir/src/PWA.cpp.o.provides
-
-CMakeFiles/PWA.dir/src/PWA.cpp.o.provides.build: CMakeFiles/PWA.dir/src/PWA.cpp.o
-
 CMakeFiles/PWA.dir/src/Provide_sgH.cpp.o: CMakeFiles/PWA.dir/flags.make
 CMakeFiles/PWA.dir/src/Provide_sgH.cpp.o: ../src/Provide_sgH.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_18)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_20)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Provide_sgH.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Provide_sgH.cpp.o -c /home/ostrick/PWA/src/Provide_sgH.cpp
 
@@ -463,216 +509,32 @@ CMakeFiles/PWA.dir/src/Provide_sgH.cpp.o.provides: CMakeFiles/PWA.dir/src/Provid
 
 CMakeFiles/PWA.dir/src/Provide_sgH.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Provide_sgH.cpp.o
 
-CMakeFiles/PWA.dir/src/Provide_Cx.cpp.o: CMakeFiles/PWA.dir/flags.make
-CMakeFiles/PWA.dir/src/Provide_Cx.cpp.o: ../src/Provide_Cx.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_19)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Provide_Cx.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Provide_Cx.cpp.o -c /home/ostrick/PWA/src/Provide_Cx.cpp
-
-CMakeFiles/PWA.dir/src/Provide_Cx.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PWA.dir/src/Provide_Cx.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ostrick/PWA/src/Provide_Cx.cpp > CMakeFiles/PWA.dir/src/Provide_Cx.cpp.i
-
-CMakeFiles/PWA.dir/src/Provide_Cx.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PWA.dir/src/Provide_Cx.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ostrick/PWA/src/Provide_Cx.cpp -o CMakeFiles/PWA.dir/src/Provide_Cx.cpp.s
-
-CMakeFiles/PWA.dir/src/Provide_Cx.cpp.o.requires:
-.PHONY : CMakeFiles/PWA.dir/src/Provide_Cx.cpp.o.requires
-
-CMakeFiles/PWA.dir/src/Provide_Cx.cpp.o.provides: CMakeFiles/PWA.dir/src/Provide_Cx.cpp.o.requires
-	$(MAKE) -f CMakeFiles/PWA.dir/build.make CMakeFiles/PWA.dir/src/Provide_Cx.cpp.o.provides.build
-.PHONY : CMakeFiles/PWA.dir/src/Provide_Cx.cpp.o.provides
-
-CMakeFiles/PWA.dir/src/Provide_Cx.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Provide_Cx.cpp.o
-
-CMakeFiles/PWA.dir/src/Provide_sgCz.cpp.o: CMakeFiles/PWA.dir/flags.make
-CMakeFiles/PWA.dir/src/Provide_sgCz.cpp.o: ../src/Provide_sgCz.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_20)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Provide_sgCz.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Provide_sgCz.cpp.o -c /home/ostrick/PWA/src/Provide_sgCz.cpp
-
-CMakeFiles/PWA.dir/src/Provide_sgCz.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PWA.dir/src/Provide_sgCz.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ostrick/PWA/src/Provide_sgCz.cpp > CMakeFiles/PWA.dir/src/Provide_sgCz.cpp.i
-
-CMakeFiles/PWA.dir/src/Provide_sgCz.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PWA.dir/src/Provide_sgCz.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ostrick/PWA/src/Provide_sgCz.cpp -o CMakeFiles/PWA.dir/src/Provide_sgCz.cpp.s
-
-CMakeFiles/PWA.dir/src/Provide_sgCz.cpp.o.requires:
-.PHONY : CMakeFiles/PWA.dir/src/Provide_sgCz.cpp.o.requires
-
-CMakeFiles/PWA.dir/src/Provide_sgCz.cpp.o.provides: CMakeFiles/PWA.dir/src/Provide_sgCz.cpp.o.requires
-	$(MAKE) -f CMakeFiles/PWA.dir/build.make CMakeFiles/PWA.dir/src/Provide_sgCz.cpp.o.provides.build
-.PHONY : CMakeFiles/PWA.dir/src/Provide_sgCz.cpp.o.provides
-
-CMakeFiles/PWA.dir/src/Provide_sgCz.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Provide_sgCz.cpp.o
-
-CMakeFiles/PWA.dir/src/Provide_Tx.cpp.o: CMakeFiles/PWA.dir/flags.make
-CMakeFiles/PWA.dir/src/Provide_Tx.cpp.o: ../src/Provide_Tx.cpp
+CMakeFiles/PWA.dir/src/Provide_F.cpp.o: CMakeFiles/PWA.dir/flags.make
+CMakeFiles/PWA.dir/src/Provide_F.cpp.o: ../src/Provide_F.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_21)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Provide_Tx.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Provide_Tx.cpp.o -c /home/ostrick/PWA/src/Provide_Tx.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Provide_F.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Provide_F.cpp.o -c /home/ostrick/PWA/src/Provide_F.cpp
 
-CMakeFiles/PWA.dir/src/Provide_Tx.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PWA.dir/src/Provide_Tx.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ostrick/PWA/src/Provide_Tx.cpp > CMakeFiles/PWA.dir/src/Provide_Tx.cpp.i
+CMakeFiles/PWA.dir/src/Provide_F.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PWA.dir/src/Provide_F.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ostrick/PWA/src/Provide_F.cpp > CMakeFiles/PWA.dir/src/Provide_F.cpp.i
 
-CMakeFiles/PWA.dir/src/Provide_Tx.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PWA.dir/src/Provide_Tx.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ostrick/PWA/src/Provide_Tx.cpp -o CMakeFiles/PWA.dir/src/Provide_Tx.cpp.s
+CMakeFiles/PWA.dir/src/Provide_F.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PWA.dir/src/Provide_F.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ostrick/PWA/src/Provide_F.cpp -o CMakeFiles/PWA.dir/src/Provide_F.cpp.s
 
-CMakeFiles/PWA.dir/src/Provide_Tx.cpp.o.requires:
-.PHONY : CMakeFiles/PWA.dir/src/Provide_Tx.cpp.o.requires
+CMakeFiles/PWA.dir/src/Provide_F.cpp.o.requires:
+.PHONY : CMakeFiles/PWA.dir/src/Provide_F.cpp.o.requires
 
-CMakeFiles/PWA.dir/src/Provide_Tx.cpp.o.provides: CMakeFiles/PWA.dir/src/Provide_Tx.cpp.o.requires
-	$(MAKE) -f CMakeFiles/PWA.dir/build.make CMakeFiles/PWA.dir/src/Provide_Tx.cpp.o.provides.build
-.PHONY : CMakeFiles/PWA.dir/src/Provide_Tx.cpp.o.provides
+CMakeFiles/PWA.dir/src/Provide_F.cpp.o.provides: CMakeFiles/PWA.dir/src/Provide_F.cpp.o.requires
+	$(MAKE) -f CMakeFiles/PWA.dir/build.make CMakeFiles/PWA.dir/src/Provide_F.cpp.o.provides.build
+.PHONY : CMakeFiles/PWA.dir/src/Provide_F.cpp.o.provides
 
-CMakeFiles/PWA.dir/src/Provide_Tx.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Provide_Tx.cpp.o
-
-CMakeFiles/PWA.dir/src/Provide_T.cpp.o: CMakeFiles/PWA.dir/flags.make
-CMakeFiles/PWA.dir/src/Provide_T.cpp.o: ../src/Provide_T.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_22)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Provide_T.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Provide_T.cpp.o -c /home/ostrick/PWA/src/Provide_T.cpp
-
-CMakeFiles/PWA.dir/src/Provide_T.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PWA.dir/src/Provide_T.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ostrick/PWA/src/Provide_T.cpp > CMakeFiles/PWA.dir/src/Provide_T.cpp.i
-
-CMakeFiles/PWA.dir/src/Provide_T.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PWA.dir/src/Provide_T.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ostrick/PWA/src/Provide_T.cpp -o CMakeFiles/PWA.dir/src/Provide_T.cpp.s
-
-CMakeFiles/PWA.dir/src/Provide_T.cpp.o.requires:
-.PHONY : CMakeFiles/PWA.dir/src/Provide_T.cpp.o.requires
-
-CMakeFiles/PWA.dir/src/Provide_T.cpp.o.provides: CMakeFiles/PWA.dir/src/Provide_T.cpp.o.requires
-	$(MAKE) -f CMakeFiles/PWA.dir/build.make CMakeFiles/PWA.dir/src/Provide_T.cpp.o.provides.build
-.PHONY : CMakeFiles/PWA.dir/src/Provide_T.cpp.o.provides
-
-CMakeFiles/PWA.dir/src/Provide_T.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Provide_T.cpp.o
-
-CMakeFiles/PWA.dir/src/Provide_Ox.cpp.o: CMakeFiles/PWA.dir/flags.make
-CMakeFiles/PWA.dir/src/Provide_Ox.cpp.o: ../src/Provide_Ox.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_23)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Provide_Ox.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Provide_Ox.cpp.o -c /home/ostrick/PWA/src/Provide_Ox.cpp
-
-CMakeFiles/PWA.dir/src/Provide_Ox.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PWA.dir/src/Provide_Ox.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ostrick/PWA/src/Provide_Ox.cpp > CMakeFiles/PWA.dir/src/Provide_Ox.cpp.i
-
-CMakeFiles/PWA.dir/src/Provide_Ox.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PWA.dir/src/Provide_Ox.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ostrick/PWA/src/Provide_Ox.cpp -o CMakeFiles/PWA.dir/src/Provide_Ox.cpp.s
-
-CMakeFiles/PWA.dir/src/Provide_Ox.cpp.o.requires:
-.PHONY : CMakeFiles/PWA.dir/src/Provide_Ox.cpp.o.requires
-
-CMakeFiles/PWA.dir/src/Provide_Ox.cpp.o.provides: CMakeFiles/PWA.dir/src/Provide_Ox.cpp.o.requires
-	$(MAKE) -f CMakeFiles/PWA.dir/build.make CMakeFiles/PWA.dir/src/Provide_Ox.cpp.o.provides.build
-.PHONY : CMakeFiles/PWA.dir/src/Provide_Ox.cpp.o.provides
-
-CMakeFiles/PWA.dir/src/Provide_Ox.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Provide_Ox.cpp.o
-
-CMakeFiles/PWA.dir/src/Provide_sgT.cpp.o: CMakeFiles/PWA.dir/flags.make
-CMakeFiles/PWA.dir/src/Provide_sgT.cpp.o: ../src/Provide_sgT.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_24)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Provide_sgT.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Provide_sgT.cpp.o -c /home/ostrick/PWA/src/Provide_sgT.cpp
-
-CMakeFiles/PWA.dir/src/Provide_sgT.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PWA.dir/src/Provide_sgT.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ostrick/PWA/src/Provide_sgT.cpp > CMakeFiles/PWA.dir/src/Provide_sgT.cpp.i
-
-CMakeFiles/PWA.dir/src/Provide_sgT.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PWA.dir/src/Provide_sgT.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ostrick/PWA/src/Provide_sgT.cpp -o CMakeFiles/PWA.dir/src/Provide_sgT.cpp.s
-
-CMakeFiles/PWA.dir/src/Provide_sgT.cpp.o.requires:
-.PHONY : CMakeFiles/PWA.dir/src/Provide_sgT.cpp.o.requires
-
-CMakeFiles/PWA.dir/src/Provide_sgT.cpp.o.provides: CMakeFiles/PWA.dir/src/Provide_sgT.cpp.o.requires
-	$(MAKE) -f CMakeFiles/PWA.dir/build.make CMakeFiles/PWA.dir/src/Provide_sgT.cpp.o.provides.build
-.PHONY : CMakeFiles/PWA.dir/src/Provide_sgT.cpp.o.provides
-
-CMakeFiles/PWA.dir/src/Provide_sgT.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Provide_sgT.cpp.o
-
-CMakeFiles/PWA.dir/src/Provide_Lx.cpp.o: CMakeFiles/PWA.dir/flags.make
-CMakeFiles/PWA.dir/src/Provide_Lx.cpp.o: ../src/Provide_Lx.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_25)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Provide_Lx.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Provide_Lx.cpp.o -c /home/ostrick/PWA/src/Provide_Lx.cpp
-
-CMakeFiles/PWA.dir/src/Provide_Lx.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PWA.dir/src/Provide_Lx.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ostrick/PWA/src/Provide_Lx.cpp > CMakeFiles/PWA.dir/src/Provide_Lx.cpp.i
-
-CMakeFiles/PWA.dir/src/Provide_Lx.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PWA.dir/src/Provide_Lx.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ostrick/PWA/src/Provide_Lx.cpp -o CMakeFiles/PWA.dir/src/Provide_Lx.cpp.s
-
-CMakeFiles/PWA.dir/src/Provide_Lx.cpp.o.requires:
-.PHONY : CMakeFiles/PWA.dir/src/Provide_Lx.cpp.o.requires
-
-CMakeFiles/PWA.dir/src/Provide_Lx.cpp.o.provides: CMakeFiles/PWA.dir/src/Provide_Lx.cpp.o.requires
-	$(MAKE) -f CMakeFiles/PWA.dir/build.make CMakeFiles/PWA.dir/src/Provide_Lx.cpp.o.provides.build
-.PHONY : CMakeFiles/PWA.dir/src/Provide_Lx.cpp.o.provides
-
-CMakeFiles/PWA.dir/src/Provide_Lx.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Provide_Lx.cpp.o
-
-CMakeFiles/PWA.dir/src/Parse_MAID.cpp.o: CMakeFiles/PWA.dir/flags.make
-CMakeFiles/PWA.dir/src/Parse_MAID.cpp.o: ../src/Parse_MAID.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_26)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Parse_MAID.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Parse_MAID.cpp.o -c /home/ostrick/PWA/src/Parse_MAID.cpp
-
-CMakeFiles/PWA.dir/src/Parse_MAID.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PWA.dir/src/Parse_MAID.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ostrick/PWA/src/Parse_MAID.cpp > CMakeFiles/PWA.dir/src/Parse_MAID.cpp.i
-
-CMakeFiles/PWA.dir/src/Parse_MAID.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PWA.dir/src/Parse_MAID.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ostrick/PWA/src/Parse_MAID.cpp -o CMakeFiles/PWA.dir/src/Parse_MAID.cpp.s
-
-CMakeFiles/PWA.dir/src/Parse_MAID.cpp.o.requires:
-.PHONY : CMakeFiles/PWA.dir/src/Parse_MAID.cpp.o.requires
-
-CMakeFiles/PWA.dir/src/Parse_MAID.cpp.o.provides: CMakeFiles/PWA.dir/src/Parse_MAID.cpp.o.requires
-	$(MAKE) -f CMakeFiles/PWA.dir/build.make CMakeFiles/PWA.dir/src/Parse_MAID.cpp.o.provides.build
-.PHONY : CMakeFiles/PWA.dir/src/Parse_MAID.cpp.o.provides
-
-CMakeFiles/PWA.dir/src/Parse_MAID.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Parse_MAID.cpp.o
-
-CMakeFiles/PWA.dir/src/Provide_sgF.cpp.o: CMakeFiles/PWA.dir/flags.make
-CMakeFiles/PWA.dir/src/Provide_sgF.cpp.o: ../src/Provide_sgF.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_27)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Provide_sgF.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Provide_sgF.cpp.o -c /home/ostrick/PWA/src/Provide_sgF.cpp
-
-CMakeFiles/PWA.dir/src/Provide_sgF.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PWA.dir/src/Provide_sgF.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ostrick/PWA/src/Provide_sgF.cpp > CMakeFiles/PWA.dir/src/Provide_sgF.cpp.i
-
-CMakeFiles/PWA.dir/src/Provide_sgF.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PWA.dir/src/Provide_sgF.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ostrick/PWA/src/Provide_sgF.cpp -o CMakeFiles/PWA.dir/src/Provide_sgF.cpp.s
-
-CMakeFiles/PWA.dir/src/Provide_sgF.cpp.o.requires:
-.PHONY : CMakeFiles/PWA.dir/src/Provide_sgF.cpp.o.requires
-
-CMakeFiles/PWA.dir/src/Provide_sgF.cpp.o.provides: CMakeFiles/PWA.dir/src/Provide_sgF.cpp.o.requires
-	$(MAKE) -f CMakeFiles/PWA.dir/build.make CMakeFiles/PWA.dir/src/Provide_sgF.cpp.o.provides.build
-.PHONY : CMakeFiles/PWA.dir/src/Provide_sgF.cpp.o.provides
-
-CMakeFiles/PWA.dir/src/Provide_sgF.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Provide_sgF.cpp.o
+CMakeFiles/PWA.dir/src/Provide_F.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Provide_F.cpp.o
 
 CMakeFiles/PWA.dir/src/Provide_sgP.cpp.o: CMakeFiles/PWA.dir/flags.make
 CMakeFiles/PWA.dir/src/Provide_sgP.cpp.o: ../src/Provide_sgP.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_28)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_22)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Provide_sgP.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Provide_sgP.cpp.o -c /home/ostrick/PWA/src/Provide_sgP.cpp
 
@@ -693,32 +555,78 @@ CMakeFiles/PWA.dir/src/Provide_sgP.cpp.o.provides: CMakeFiles/PWA.dir/src/Provid
 
 CMakeFiles/PWA.dir/src/Provide_sgP.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Provide_sgP.cpp.o
 
-CMakeFiles/PWA.dir/src/Provide_Tz.cpp.o: CMakeFiles/PWA.dir/flags.make
-CMakeFiles/PWA.dir/src/Provide_Tz.cpp.o: ../src/Provide_Tz.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_29)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Provide_Tz.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Provide_Tz.cpp.o -c /home/ostrick/PWA/src/Provide_Tz.cpp
+CMakeFiles/PWA.dir/src/Provide_Cx.cpp.o: CMakeFiles/PWA.dir/flags.make
+CMakeFiles/PWA.dir/src/Provide_Cx.cpp.o: ../src/Provide_Cx.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_23)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Provide_Cx.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Provide_Cx.cpp.o -c /home/ostrick/PWA/src/Provide_Cx.cpp
 
-CMakeFiles/PWA.dir/src/Provide_Tz.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PWA.dir/src/Provide_Tz.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ostrick/PWA/src/Provide_Tz.cpp > CMakeFiles/PWA.dir/src/Provide_Tz.cpp.i
+CMakeFiles/PWA.dir/src/Provide_Cx.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PWA.dir/src/Provide_Cx.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ostrick/PWA/src/Provide_Cx.cpp > CMakeFiles/PWA.dir/src/Provide_Cx.cpp.i
 
-CMakeFiles/PWA.dir/src/Provide_Tz.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PWA.dir/src/Provide_Tz.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ostrick/PWA/src/Provide_Tz.cpp -o CMakeFiles/PWA.dir/src/Provide_Tz.cpp.s
+CMakeFiles/PWA.dir/src/Provide_Cx.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PWA.dir/src/Provide_Cx.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ostrick/PWA/src/Provide_Cx.cpp -o CMakeFiles/PWA.dir/src/Provide_Cx.cpp.s
 
-CMakeFiles/PWA.dir/src/Provide_Tz.cpp.o.requires:
-.PHONY : CMakeFiles/PWA.dir/src/Provide_Tz.cpp.o.requires
+CMakeFiles/PWA.dir/src/Provide_Cx.cpp.o.requires:
+.PHONY : CMakeFiles/PWA.dir/src/Provide_Cx.cpp.o.requires
 
-CMakeFiles/PWA.dir/src/Provide_Tz.cpp.o.provides: CMakeFiles/PWA.dir/src/Provide_Tz.cpp.o.requires
-	$(MAKE) -f CMakeFiles/PWA.dir/build.make CMakeFiles/PWA.dir/src/Provide_Tz.cpp.o.provides.build
-.PHONY : CMakeFiles/PWA.dir/src/Provide_Tz.cpp.o.provides
+CMakeFiles/PWA.dir/src/Provide_Cx.cpp.o.provides: CMakeFiles/PWA.dir/src/Provide_Cx.cpp.o.requires
+	$(MAKE) -f CMakeFiles/PWA.dir/build.make CMakeFiles/PWA.dir/src/Provide_Cx.cpp.o.provides.build
+.PHONY : CMakeFiles/PWA.dir/src/Provide_Cx.cpp.o.provides
 
-CMakeFiles/PWA.dir/src/Provide_Tz.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Provide_Tz.cpp.o
+CMakeFiles/PWA.dir/src/Provide_Cx.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Provide_Cx.cpp.o
+
+CMakeFiles/PWA.dir/src/Parse_MAID.cpp.o: CMakeFiles/PWA.dir/flags.make
+CMakeFiles/PWA.dir/src/Parse_MAID.cpp.o: ../src/Parse_MAID.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_24)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Parse_MAID.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Parse_MAID.cpp.o -c /home/ostrick/PWA/src/Parse_MAID.cpp
+
+CMakeFiles/PWA.dir/src/Parse_MAID.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PWA.dir/src/Parse_MAID.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ostrick/PWA/src/Parse_MAID.cpp > CMakeFiles/PWA.dir/src/Parse_MAID.cpp.i
+
+CMakeFiles/PWA.dir/src/Parse_MAID.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PWA.dir/src/Parse_MAID.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ostrick/PWA/src/Parse_MAID.cpp -o CMakeFiles/PWA.dir/src/Parse_MAID.cpp.s
+
+CMakeFiles/PWA.dir/src/Parse_MAID.cpp.o.requires:
+.PHONY : CMakeFiles/PWA.dir/src/Parse_MAID.cpp.o.requires
+
+CMakeFiles/PWA.dir/src/Parse_MAID.cpp.o.provides: CMakeFiles/PWA.dir/src/Parse_MAID.cpp.o.requires
+	$(MAKE) -f CMakeFiles/PWA.dir/build.make CMakeFiles/PWA.dir/src/Parse_MAID.cpp.o.provides.build
+.PHONY : CMakeFiles/PWA.dir/src/Parse_MAID.cpp.o.provides
+
+CMakeFiles/PWA.dir/src/Parse_MAID.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Parse_MAID.cpp.o
+
+CMakeFiles/PWA.dir/src/Provide_sgLz.cpp.o: CMakeFiles/PWA.dir/flags.make
+CMakeFiles/PWA.dir/src/Provide_sgLz.cpp.o: ../src/Provide_sgLz.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_25)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Provide_sgLz.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Provide_sgLz.cpp.o -c /home/ostrick/PWA/src/Provide_sgLz.cpp
+
+CMakeFiles/PWA.dir/src/Provide_sgLz.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PWA.dir/src/Provide_sgLz.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ostrick/PWA/src/Provide_sgLz.cpp > CMakeFiles/PWA.dir/src/Provide_sgLz.cpp.i
+
+CMakeFiles/PWA.dir/src/Provide_sgLz.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PWA.dir/src/Provide_sgLz.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ostrick/PWA/src/Provide_sgLz.cpp -o CMakeFiles/PWA.dir/src/Provide_sgLz.cpp.s
+
+CMakeFiles/PWA.dir/src/Provide_sgLz.cpp.o.requires:
+.PHONY : CMakeFiles/PWA.dir/src/Provide_sgLz.cpp.o.requires
+
+CMakeFiles/PWA.dir/src/Provide_sgLz.cpp.o.provides: CMakeFiles/PWA.dir/src/Provide_sgLz.cpp.o.requires
+	$(MAKE) -f CMakeFiles/PWA.dir/build.make CMakeFiles/PWA.dir/src/Provide_sgLz.cpp.o.provides.build
+.PHONY : CMakeFiles/PWA.dir/src/Provide_sgLz.cpp.o.provides
+
+CMakeFiles/PWA.dir/src/Provide_sgLz.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Provide_sgLz.cpp.o
 
 CMakeFiles/PWA.dir/src/Provide_sgE.cpp.o: CMakeFiles/PWA.dir/flags.make
 CMakeFiles/PWA.dir/src/Provide_sgE.cpp.o: ../src/Provide_sgE.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_30)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_26)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Provide_sgE.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Provide_sgE.cpp.o -c /home/ostrick/PWA/src/Provide_sgE.cpp
 
@@ -739,55 +647,32 @@ CMakeFiles/PWA.dir/src/Provide_sgE.cpp.o.provides: CMakeFiles/PWA.dir/src/Provid
 
 CMakeFiles/PWA.dir/src/Provide_sgE.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Provide_sgE.cpp.o
 
-CMakeFiles/PWA.dir/src/Provide_sgLx.cpp.o: CMakeFiles/PWA.dir/flags.make
-CMakeFiles/PWA.dir/src/Provide_sgLx.cpp.o: ../src/Provide_sgLx.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_31)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Provide_sgLx.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Provide_sgLx.cpp.o -c /home/ostrick/PWA/src/Provide_sgLx.cpp
+CMakeFiles/PWA.dir/src/Provide_sgTx.cpp.o: CMakeFiles/PWA.dir/flags.make
+CMakeFiles/PWA.dir/src/Provide_sgTx.cpp.o: ../src/Provide_sgTx.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_27)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Provide_sgTx.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Provide_sgTx.cpp.o -c /home/ostrick/PWA/src/Provide_sgTx.cpp
 
-CMakeFiles/PWA.dir/src/Provide_sgLx.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PWA.dir/src/Provide_sgLx.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ostrick/PWA/src/Provide_sgLx.cpp > CMakeFiles/PWA.dir/src/Provide_sgLx.cpp.i
+CMakeFiles/PWA.dir/src/Provide_sgTx.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PWA.dir/src/Provide_sgTx.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ostrick/PWA/src/Provide_sgTx.cpp > CMakeFiles/PWA.dir/src/Provide_sgTx.cpp.i
 
-CMakeFiles/PWA.dir/src/Provide_sgLx.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PWA.dir/src/Provide_sgLx.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ostrick/PWA/src/Provide_sgLx.cpp -o CMakeFiles/PWA.dir/src/Provide_sgLx.cpp.s
+CMakeFiles/PWA.dir/src/Provide_sgTx.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PWA.dir/src/Provide_sgTx.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ostrick/PWA/src/Provide_sgTx.cpp -o CMakeFiles/PWA.dir/src/Provide_sgTx.cpp.s
 
-CMakeFiles/PWA.dir/src/Provide_sgLx.cpp.o.requires:
-.PHONY : CMakeFiles/PWA.dir/src/Provide_sgLx.cpp.o.requires
+CMakeFiles/PWA.dir/src/Provide_sgTx.cpp.o.requires:
+.PHONY : CMakeFiles/PWA.dir/src/Provide_sgTx.cpp.o.requires
 
-CMakeFiles/PWA.dir/src/Provide_sgLx.cpp.o.provides: CMakeFiles/PWA.dir/src/Provide_sgLx.cpp.o.requires
-	$(MAKE) -f CMakeFiles/PWA.dir/build.make CMakeFiles/PWA.dir/src/Provide_sgLx.cpp.o.provides.build
-.PHONY : CMakeFiles/PWA.dir/src/Provide_sgLx.cpp.o.provides
+CMakeFiles/PWA.dir/src/Provide_sgTx.cpp.o.provides: CMakeFiles/PWA.dir/src/Provide_sgTx.cpp.o.requires
+	$(MAKE) -f CMakeFiles/PWA.dir/build.make CMakeFiles/PWA.dir/src/Provide_sgTx.cpp.o.provides.build
+.PHONY : CMakeFiles/PWA.dir/src/Provide_sgTx.cpp.o.provides
 
-CMakeFiles/PWA.dir/src/Provide_sgLx.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Provide_sgLx.cpp.o
-
-CMakeFiles/PWA.dir/src/Provide_Cz.cpp.o: CMakeFiles/PWA.dir/flags.make
-CMakeFiles/PWA.dir/src/Provide_Cz.cpp.o: ../src/Provide_Cz.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_32)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Provide_Cz.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Provide_Cz.cpp.o -c /home/ostrick/PWA/src/Provide_Cz.cpp
-
-CMakeFiles/PWA.dir/src/Provide_Cz.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PWA.dir/src/Provide_Cz.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ostrick/PWA/src/Provide_Cz.cpp > CMakeFiles/PWA.dir/src/Provide_Cz.cpp.i
-
-CMakeFiles/PWA.dir/src/Provide_Cz.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PWA.dir/src/Provide_Cz.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ostrick/PWA/src/Provide_Cz.cpp -o CMakeFiles/PWA.dir/src/Provide_Cz.cpp.s
-
-CMakeFiles/PWA.dir/src/Provide_Cz.cpp.o.requires:
-.PHONY : CMakeFiles/PWA.dir/src/Provide_Cz.cpp.o.requires
-
-CMakeFiles/PWA.dir/src/Provide_Cz.cpp.o.provides: CMakeFiles/PWA.dir/src/Provide_Cz.cpp.o.requires
-	$(MAKE) -f CMakeFiles/PWA.dir/build.make CMakeFiles/PWA.dir/src/Provide_Cz.cpp.o.provides.build
-.PHONY : CMakeFiles/PWA.dir/src/Provide_Cz.cpp.o.provides
-
-CMakeFiles/PWA.dir/src/Provide_Cz.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Provide_Cz.cpp.o
+CMakeFiles/PWA.dir/src/Provide_sgTx.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Provide_sgTx.cpp.o
 
 CMakeFiles/PWA.dir/src/Provide_sgS.cpp.o: CMakeFiles/PWA.dir/flags.make
 CMakeFiles/PWA.dir/src/Provide_sgS.cpp.o: ../src/Provide_sgS.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_33)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_28)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Provide_sgS.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Provide_sgS.cpp.o -c /home/ostrick/PWA/src/Provide_sgS.cpp
 
@@ -808,128 +693,243 @@ CMakeFiles/PWA.dir/src/Provide_sgS.cpp.o.provides: CMakeFiles/PWA.dir/src/Provid
 
 CMakeFiles/PWA.dir/src/Provide_sgS.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Provide_sgS.cpp.o
 
-CMakeFiles/PWA.dir/src/Provide_S.cpp.o: CMakeFiles/PWA.dir/flags.make
-CMakeFiles/PWA.dir/src/Provide_S.cpp.o: ../src/Provide_S.cpp
+CMakeFiles/PWA.dir/src/Provide_P.cpp.o: CMakeFiles/PWA.dir/flags.make
+CMakeFiles/PWA.dir/src/Provide_P.cpp.o: ../src/Provide_P.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_29)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Provide_P.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Provide_P.cpp.o -c /home/ostrick/PWA/src/Provide_P.cpp
+
+CMakeFiles/PWA.dir/src/Provide_P.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PWA.dir/src/Provide_P.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ostrick/PWA/src/Provide_P.cpp > CMakeFiles/PWA.dir/src/Provide_P.cpp.i
+
+CMakeFiles/PWA.dir/src/Provide_P.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PWA.dir/src/Provide_P.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ostrick/PWA/src/Provide_P.cpp -o CMakeFiles/PWA.dir/src/Provide_P.cpp.s
+
+CMakeFiles/PWA.dir/src/Provide_P.cpp.o.requires:
+.PHONY : CMakeFiles/PWA.dir/src/Provide_P.cpp.o.requires
+
+CMakeFiles/PWA.dir/src/Provide_P.cpp.o.provides: CMakeFiles/PWA.dir/src/Provide_P.cpp.o.requires
+	$(MAKE) -f CMakeFiles/PWA.dir/build.make CMakeFiles/PWA.dir/src/Provide_P.cpp.o.provides.build
+.PHONY : CMakeFiles/PWA.dir/src/Provide_P.cpp.o.provides
+
+CMakeFiles/PWA.dir/src/Provide_P.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Provide_P.cpp.o
+
+CMakeFiles/PWA.dir/src/Provide_sgG.cpp.o: CMakeFiles/PWA.dir/flags.make
+CMakeFiles/PWA.dir/src/Provide_sgG.cpp.o: ../src/Provide_sgG.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_30)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Provide_sgG.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Provide_sgG.cpp.o -c /home/ostrick/PWA/src/Provide_sgG.cpp
+
+CMakeFiles/PWA.dir/src/Provide_sgG.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PWA.dir/src/Provide_sgG.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ostrick/PWA/src/Provide_sgG.cpp > CMakeFiles/PWA.dir/src/Provide_sgG.cpp.i
+
+CMakeFiles/PWA.dir/src/Provide_sgG.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PWA.dir/src/Provide_sgG.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ostrick/PWA/src/Provide_sgG.cpp -o CMakeFiles/PWA.dir/src/Provide_sgG.cpp.s
+
+CMakeFiles/PWA.dir/src/Provide_sgG.cpp.o.requires:
+.PHONY : CMakeFiles/PWA.dir/src/Provide_sgG.cpp.o.requires
+
+CMakeFiles/PWA.dir/src/Provide_sgG.cpp.o.provides: CMakeFiles/PWA.dir/src/Provide_sgG.cpp.o.requires
+	$(MAKE) -f CMakeFiles/PWA.dir/build.make CMakeFiles/PWA.dir/src/Provide_sgG.cpp.o.provides.build
+.PHONY : CMakeFiles/PWA.dir/src/Provide_sgG.cpp.o.provides
+
+CMakeFiles/PWA.dir/src/Provide_sgG.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Provide_sgG.cpp.o
+
+CMakeFiles/PWA.dir/src/Provide_Tx.cpp.o: CMakeFiles/PWA.dir/flags.make
+CMakeFiles/PWA.dir/src/Provide_Tx.cpp.o: ../src/Provide_Tx.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_31)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Provide_Tx.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Provide_Tx.cpp.o -c /home/ostrick/PWA/src/Provide_Tx.cpp
+
+CMakeFiles/PWA.dir/src/Provide_Tx.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PWA.dir/src/Provide_Tx.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ostrick/PWA/src/Provide_Tx.cpp > CMakeFiles/PWA.dir/src/Provide_Tx.cpp.i
+
+CMakeFiles/PWA.dir/src/Provide_Tx.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PWA.dir/src/Provide_Tx.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ostrick/PWA/src/Provide_Tx.cpp -o CMakeFiles/PWA.dir/src/Provide_Tx.cpp.s
+
+CMakeFiles/PWA.dir/src/Provide_Tx.cpp.o.requires:
+.PHONY : CMakeFiles/PWA.dir/src/Provide_Tx.cpp.o.requires
+
+CMakeFiles/PWA.dir/src/Provide_Tx.cpp.o.provides: CMakeFiles/PWA.dir/src/Provide_Tx.cpp.o.requires
+	$(MAKE) -f CMakeFiles/PWA.dir/build.make CMakeFiles/PWA.dir/src/Provide_Tx.cpp.o.provides.build
+.PHONY : CMakeFiles/PWA.dir/src/Provide_Tx.cpp.o.provides
+
+CMakeFiles/PWA.dir/src/Provide_Tx.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Provide_Tx.cpp.o
+
+CMakeFiles/PWA.dir/src/Provide_Lx.cpp.o: CMakeFiles/PWA.dir/flags.make
+CMakeFiles/PWA.dir/src/Provide_Lx.cpp.o: ../src/Provide_Lx.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_32)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Provide_Lx.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Provide_Lx.cpp.o -c /home/ostrick/PWA/src/Provide_Lx.cpp
+
+CMakeFiles/PWA.dir/src/Provide_Lx.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PWA.dir/src/Provide_Lx.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ostrick/PWA/src/Provide_Lx.cpp > CMakeFiles/PWA.dir/src/Provide_Lx.cpp.i
+
+CMakeFiles/PWA.dir/src/Provide_Lx.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PWA.dir/src/Provide_Lx.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ostrick/PWA/src/Provide_Lx.cpp -o CMakeFiles/PWA.dir/src/Provide_Lx.cpp.s
+
+CMakeFiles/PWA.dir/src/Provide_Lx.cpp.o.requires:
+.PHONY : CMakeFiles/PWA.dir/src/Provide_Lx.cpp.o.requires
+
+CMakeFiles/PWA.dir/src/Provide_Lx.cpp.o.provides: CMakeFiles/PWA.dir/src/Provide_Lx.cpp.o.requires
+	$(MAKE) -f CMakeFiles/PWA.dir/build.make CMakeFiles/PWA.dir/src/Provide_Lx.cpp.o.provides.build
+.PHONY : CMakeFiles/PWA.dir/src/Provide_Lx.cpp.o.provides
+
+CMakeFiles/PWA.dir/src/Provide_Lx.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Provide_Lx.cpp.o
+
+CMakeFiles/PWA.dir/src/Provide_sgOx.cpp.o: CMakeFiles/PWA.dir/flags.make
+CMakeFiles/PWA.dir/src/Provide_sgOx.cpp.o: ../src/Provide_sgOx.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_33)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Provide_sgOx.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Provide_sgOx.cpp.o -c /home/ostrick/PWA/src/Provide_sgOx.cpp
+
+CMakeFiles/PWA.dir/src/Provide_sgOx.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PWA.dir/src/Provide_sgOx.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ostrick/PWA/src/Provide_sgOx.cpp > CMakeFiles/PWA.dir/src/Provide_sgOx.cpp.i
+
+CMakeFiles/PWA.dir/src/Provide_sgOx.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PWA.dir/src/Provide_sgOx.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ostrick/PWA/src/Provide_sgOx.cpp -o CMakeFiles/PWA.dir/src/Provide_sgOx.cpp.s
+
+CMakeFiles/PWA.dir/src/Provide_sgOx.cpp.o.requires:
+.PHONY : CMakeFiles/PWA.dir/src/Provide_sgOx.cpp.o.requires
+
+CMakeFiles/PWA.dir/src/Provide_sgOx.cpp.o.provides: CMakeFiles/PWA.dir/src/Provide_sgOx.cpp.o.requires
+	$(MAKE) -f CMakeFiles/PWA.dir/build.make CMakeFiles/PWA.dir/src/Provide_sgOx.cpp.o.provides.build
+.PHONY : CMakeFiles/PWA.dir/src/Provide_sgOx.cpp.o.provides
+
+CMakeFiles/PWA.dir/src/Provide_sgOx.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Provide_sgOx.cpp.o
+
+CMakeFiles/PWA.dir/src/Provide_sgLx.cpp.o: CMakeFiles/PWA.dir/flags.make
+CMakeFiles/PWA.dir/src/Provide_sgLx.cpp.o: ../src/Provide_sgLx.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_34)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Provide_S.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Provide_S.cpp.o -c /home/ostrick/PWA/src/Provide_S.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Provide_sgLx.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Provide_sgLx.cpp.o -c /home/ostrick/PWA/src/Provide_sgLx.cpp
 
-CMakeFiles/PWA.dir/src/Provide_S.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PWA.dir/src/Provide_S.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ostrick/PWA/src/Provide_S.cpp > CMakeFiles/PWA.dir/src/Provide_S.cpp.i
+CMakeFiles/PWA.dir/src/Provide_sgLx.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PWA.dir/src/Provide_sgLx.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ostrick/PWA/src/Provide_sgLx.cpp > CMakeFiles/PWA.dir/src/Provide_sgLx.cpp.i
 
-CMakeFiles/PWA.dir/src/Provide_S.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PWA.dir/src/Provide_S.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ostrick/PWA/src/Provide_S.cpp -o CMakeFiles/PWA.dir/src/Provide_S.cpp.s
+CMakeFiles/PWA.dir/src/Provide_sgLx.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PWA.dir/src/Provide_sgLx.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ostrick/PWA/src/Provide_sgLx.cpp -o CMakeFiles/PWA.dir/src/Provide_sgLx.cpp.s
 
-CMakeFiles/PWA.dir/src/Provide_S.cpp.o.requires:
-.PHONY : CMakeFiles/PWA.dir/src/Provide_S.cpp.o.requires
+CMakeFiles/PWA.dir/src/Provide_sgLx.cpp.o.requires:
+.PHONY : CMakeFiles/PWA.dir/src/Provide_sgLx.cpp.o.requires
 
-CMakeFiles/PWA.dir/src/Provide_S.cpp.o.provides: CMakeFiles/PWA.dir/src/Provide_S.cpp.o.requires
-	$(MAKE) -f CMakeFiles/PWA.dir/build.make CMakeFiles/PWA.dir/src/Provide_S.cpp.o.provides.build
-.PHONY : CMakeFiles/PWA.dir/src/Provide_S.cpp.o.provides
+CMakeFiles/PWA.dir/src/Provide_sgLx.cpp.o.provides: CMakeFiles/PWA.dir/src/Provide_sgLx.cpp.o.requires
+	$(MAKE) -f CMakeFiles/PWA.dir/build.make CMakeFiles/PWA.dir/src/Provide_sgLx.cpp.o.provides.build
+.PHONY : CMakeFiles/PWA.dir/src/Provide_sgLx.cpp.o.provides
 
-CMakeFiles/PWA.dir/src/Provide_S.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Provide_S.cpp.o
+CMakeFiles/PWA.dir/src/Provide_sgLx.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Provide_sgLx.cpp.o
 
-CMakeFiles/PWA.dir/src/Parse_HELI.cpp.o: CMakeFiles/PWA.dir/flags.make
-CMakeFiles/PWA.dir/src/Parse_HELI.cpp.o: ../src/Parse_HELI.cpp
+CMakeFiles/PWA.dir/src/Provide_Ox.cpp.o: CMakeFiles/PWA.dir/flags.make
+CMakeFiles/PWA.dir/src/Provide_Ox.cpp.o: ../src/Provide_Ox.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/ostrick/PWA/build/CMakeFiles $(CMAKE_PROGRESS_35)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Parse_HELI.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Parse_HELI.cpp.o -c /home/ostrick/PWA/src/Parse_HELI.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/PWA.dir/src/Provide_Ox.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/PWA.dir/src/Provide_Ox.cpp.o -c /home/ostrick/PWA/src/Provide_Ox.cpp
 
-CMakeFiles/PWA.dir/src/Parse_HELI.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PWA.dir/src/Parse_HELI.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ostrick/PWA/src/Parse_HELI.cpp > CMakeFiles/PWA.dir/src/Parse_HELI.cpp.i
+CMakeFiles/PWA.dir/src/Provide_Ox.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PWA.dir/src/Provide_Ox.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ostrick/PWA/src/Provide_Ox.cpp > CMakeFiles/PWA.dir/src/Provide_Ox.cpp.i
 
-CMakeFiles/PWA.dir/src/Parse_HELI.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PWA.dir/src/Parse_HELI.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ostrick/PWA/src/Parse_HELI.cpp -o CMakeFiles/PWA.dir/src/Parse_HELI.cpp.s
+CMakeFiles/PWA.dir/src/Provide_Ox.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PWA.dir/src/Provide_Ox.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ostrick/PWA/src/Provide_Ox.cpp -o CMakeFiles/PWA.dir/src/Provide_Ox.cpp.s
 
-CMakeFiles/PWA.dir/src/Parse_HELI.cpp.o.requires:
-.PHONY : CMakeFiles/PWA.dir/src/Parse_HELI.cpp.o.requires
+CMakeFiles/PWA.dir/src/Provide_Ox.cpp.o.requires:
+.PHONY : CMakeFiles/PWA.dir/src/Provide_Ox.cpp.o.requires
 
-CMakeFiles/PWA.dir/src/Parse_HELI.cpp.o.provides: CMakeFiles/PWA.dir/src/Parse_HELI.cpp.o.requires
-	$(MAKE) -f CMakeFiles/PWA.dir/build.make CMakeFiles/PWA.dir/src/Parse_HELI.cpp.o.provides.build
-.PHONY : CMakeFiles/PWA.dir/src/Parse_HELI.cpp.o.provides
+CMakeFiles/PWA.dir/src/Provide_Ox.cpp.o.provides: CMakeFiles/PWA.dir/src/Provide_Ox.cpp.o.requires
+	$(MAKE) -f CMakeFiles/PWA.dir/build.make CMakeFiles/PWA.dir/src/Provide_Ox.cpp.o.provides.build
+.PHONY : CMakeFiles/PWA.dir/src/Provide_Ox.cpp.o.provides
 
-CMakeFiles/PWA.dir/src/Parse_HELI.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Parse_HELI.cpp.o
+CMakeFiles/PWA.dir/src/Provide_Ox.cpp.o.provides.build: CMakeFiles/PWA.dir/src/Provide_Ox.cpp.o
 
 # Object files for target PWA
 PWA_OBJECTS = \
-"CMakeFiles/PWA.dir/src/Provide_E.cpp.o" \
+"CMakeFiles/PWA.dir/src/Provide_Tz.cpp.o" \
+"CMakeFiles/PWA.dir/src/Provide_sg0.cpp.o" \
+"CMakeFiles/PWA.dir/src/Provide_Cz.cpp.o" \
 "CMakeFiles/PWA.dir/src/Provide_Lz.cpp.o" \
+"CMakeFiles/PWA.dir/src/Provide_T.cpp.o" \
+"CMakeFiles/PWA.dir/src/Provide_sgF.cpp.o" \
+"CMakeFiles/PWA.dir/src/Fitter.cpp.o" \
+"CMakeFiles/PWA.dir/src/Provide_Oz.cpp.o" \
+"CMakeFiles/PWA.dir/src/Parse_HELI.cpp.o" \
+"CMakeFiles/PWA.dir/src/PWA.cpp.o" \
+"CMakeFiles/PWA.dir/src/Provide_sgCx.cpp.o" \
+"CMakeFiles/PWA.dir/src/Provide_sgOz.cpp.o" \
+"CMakeFiles/PWA.dir/src/Provide_E.cpp.o" \
+"CMakeFiles/PWA.dir/src/Provide_sgCz.cpp.o" \
+"CMakeFiles/PWA.dir/src/Provide_S.cpp.o" \
 "CMakeFiles/PWA.dir/src/Provide_sgTz.cpp.o" \
+"CMakeFiles/PWA.dir/src/Provide_sgT.cpp.o" \
 "CMakeFiles/PWA.dir/src/Provide_H.cpp.o" \
 "CMakeFiles/PWA.dir/src/Provide_G.cpp.o" \
-"CMakeFiles/PWA.dir/src/Provide_F.cpp.o" \
-"CMakeFiles/PWA.dir/src/Provide_sgOz.cpp.o" \
-"CMakeFiles/PWA.dir/src/Provide_sgLz.cpp.o" \
-"CMakeFiles/PWA.dir/src/Provide_sgTx.cpp.o" \
-"CMakeFiles/PWA.dir/src/Provide_sgG.cpp.o" \
-"CMakeFiles/PWA.dir/src/Fitter.cpp.o" \
-"CMakeFiles/PWA.dir/src/Provide_sgOx.cpp.o" \
-"CMakeFiles/PWA.dir/src/Provide_sg0.cpp.o" \
-"CMakeFiles/PWA.dir/src/Provide_P.cpp.o" \
-"CMakeFiles/PWA.dir/src/Provide_sgCx.cpp.o" \
-"CMakeFiles/PWA.dir/src/Provide_Oz.cpp.o" \
-"CMakeFiles/PWA.dir/src/PWA.cpp.o" \
 "CMakeFiles/PWA.dir/src/Provide_sgH.cpp.o" \
-"CMakeFiles/PWA.dir/src/Provide_Cx.cpp.o" \
-"CMakeFiles/PWA.dir/src/Provide_sgCz.cpp.o" \
-"CMakeFiles/PWA.dir/src/Provide_Tx.cpp.o" \
-"CMakeFiles/PWA.dir/src/Provide_T.cpp.o" \
-"CMakeFiles/PWA.dir/src/Provide_Ox.cpp.o" \
-"CMakeFiles/PWA.dir/src/Provide_sgT.cpp.o" \
-"CMakeFiles/PWA.dir/src/Provide_Lx.cpp.o" \
-"CMakeFiles/PWA.dir/src/Parse_MAID.cpp.o" \
-"CMakeFiles/PWA.dir/src/Provide_sgF.cpp.o" \
+"CMakeFiles/PWA.dir/src/Provide_F.cpp.o" \
 "CMakeFiles/PWA.dir/src/Provide_sgP.cpp.o" \
-"CMakeFiles/PWA.dir/src/Provide_Tz.cpp.o" \
+"CMakeFiles/PWA.dir/src/Provide_Cx.cpp.o" \
+"CMakeFiles/PWA.dir/src/Parse_MAID.cpp.o" \
+"CMakeFiles/PWA.dir/src/Provide_sgLz.cpp.o" \
 "CMakeFiles/PWA.dir/src/Provide_sgE.cpp.o" \
-"CMakeFiles/PWA.dir/src/Provide_sgLx.cpp.o" \
-"CMakeFiles/PWA.dir/src/Provide_Cz.cpp.o" \
+"CMakeFiles/PWA.dir/src/Provide_sgTx.cpp.o" \
 "CMakeFiles/PWA.dir/src/Provide_sgS.cpp.o" \
-"CMakeFiles/PWA.dir/src/Provide_S.cpp.o" \
-"CMakeFiles/PWA.dir/src/Parse_HELI.cpp.o"
+"CMakeFiles/PWA.dir/src/Provide_P.cpp.o" \
+"CMakeFiles/PWA.dir/src/Provide_sgG.cpp.o" \
+"CMakeFiles/PWA.dir/src/Provide_Tx.cpp.o" \
+"CMakeFiles/PWA.dir/src/Provide_Lx.cpp.o" \
+"CMakeFiles/PWA.dir/src/Provide_sgOx.cpp.o" \
+"CMakeFiles/PWA.dir/src/Provide_sgLx.cpp.o" \
+"CMakeFiles/PWA.dir/src/Provide_Ox.cpp.o"
 
 # External object files for target PWA
 PWA_EXTERNAL_OBJECTS =
 
-bin/PWA: CMakeFiles/PWA.dir/src/Provide_E.cpp.o
+bin/PWA: CMakeFiles/PWA.dir/src/Provide_Tz.cpp.o
+bin/PWA: CMakeFiles/PWA.dir/src/Provide_sg0.cpp.o
+bin/PWA: CMakeFiles/PWA.dir/src/Provide_Cz.cpp.o
 bin/PWA: CMakeFiles/PWA.dir/src/Provide_Lz.cpp.o
+bin/PWA: CMakeFiles/PWA.dir/src/Provide_T.cpp.o
+bin/PWA: CMakeFiles/PWA.dir/src/Provide_sgF.cpp.o
+bin/PWA: CMakeFiles/PWA.dir/src/Fitter.cpp.o
+bin/PWA: CMakeFiles/PWA.dir/src/Provide_Oz.cpp.o
+bin/PWA: CMakeFiles/PWA.dir/src/Parse_HELI.cpp.o
+bin/PWA: CMakeFiles/PWA.dir/src/PWA.cpp.o
+bin/PWA: CMakeFiles/PWA.dir/src/Provide_sgCx.cpp.o
+bin/PWA: CMakeFiles/PWA.dir/src/Provide_sgOz.cpp.o
+bin/PWA: CMakeFiles/PWA.dir/src/Provide_E.cpp.o
+bin/PWA: CMakeFiles/PWA.dir/src/Provide_sgCz.cpp.o
+bin/PWA: CMakeFiles/PWA.dir/src/Provide_S.cpp.o
 bin/PWA: CMakeFiles/PWA.dir/src/Provide_sgTz.cpp.o
+bin/PWA: CMakeFiles/PWA.dir/src/Provide_sgT.cpp.o
 bin/PWA: CMakeFiles/PWA.dir/src/Provide_H.cpp.o
 bin/PWA: CMakeFiles/PWA.dir/src/Provide_G.cpp.o
-bin/PWA: CMakeFiles/PWA.dir/src/Provide_F.cpp.o
-bin/PWA: CMakeFiles/PWA.dir/src/Provide_sgOz.cpp.o
-bin/PWA: CMakeFiles/PWA.dir/src/Provide_sgLz.cpp.o
-bin/PWA: CMakeFiles/PWA.dir/src/Provide_sgTx.cpp.o
-bin/PWA: CMakeFiles/PWA.dir/src/Provide_sgG.cpp.o
-bin/PWA: CMakeFiles/PWA.dir/src/Fitter.cpp.o
-bin/PWA: CMakeFiles/PWA.dir/src/Provide_sgOx.cpp.o
-bin/PWA: CMakeFiles/PWA.dir/src/Provide_sg0.cpp.o
-bin/PWA: CMakeFiles/PWA.dir/src/Provide_P.cpp.o
-bin/PWA: CMakeFiles/PWA.dir/src/Provide_sgCx.cpp.o
-bin/PWA: CMakeFiles/PWA.dir/src/Provide_Oz.cpp.o
-bin/PWA: CMakeFiles/PWA.dir/src/PWA.cpp.o
 bin/PWA: CMakeFiles/PWA.dir/src/Provide_sgH.cpp.o
-bin/PWA: CMakeFiles/PWA.dir/src/Provide_Cx.cpp.o
-bin/PWA: CMakeFiles/PWA.dir/src/Provide_sgCz.cpp.o
-bin/PWA: CMakeFiles/PWA.dir/src/Provide_Tx.cpp.o
-bin/PWA: CMakeFiles/PWA.dir/src/Provide_T.cpp.o
-bin/PWA: CMakeFiles/PWA.dir/src/Provide_Ox.cpp.o
-bin/PWA: CMakeFiles/PWA.dir/src/Provide_sgT.cpp.o
-bin/PWA: CMakeFiles/PWA.dir/src/Provide_Lx.cpp.o
-bin/PWA: CMakeFiles/PWA.dir/src/Parse_MAID.cpp.o
-bin/PWA: CMakeFiles/PWA.dir/src/Provide_sgF.cpp.o
+bin/PWA: CMakeFiles/PWA.dir/src/Provide_F.cpp.o
 bin/PWA: CMakeFiles/PWA.dir/src/Provide_sgP.cpp.o
-bin/PWA: CMakeFiles/PWA.dir/src/Provide_Tz.cpp.o
+bin/PWA: CMakeFiles/PWA.dir/src/Provide_Cx.cpp.o
+bin/PWA: CMakeFiles/PWA.dir/src/Parse_MAID.cpp.o
+bin/PWA: CMakeFiles/PWA.dir/src/Provide_sgLz.cpp.o
 bin/PWA: CMakeFiles/PWA.dir/src/Provide_sgE.cpp.o
-bin/PWA: CMakeFiles/PWA.dir/src/Provide_sgLx.cpp.o
-bin/PWA: CMakeFiles/PWA.dir/src/Provide_Cz.cpp.o
+bin/PWA: CMakeFiles/PWA.dir/src/Provide_sgTx.cpp.o
 bin/PWA: CMakeFiles/PWA.dir/src/Provide_sgS.cpp.o
-bin/PWA: CMakeFiles/PWA.dir/src/Provide_S.cpp.o
-bin/PWA: CMakeFiles/PWA.dir/src/Parse_HELI.cpp.o
+bin/PWA: CMakeFiles/PWA.dir/src/Provide_P.cpp.o
+bin/PWA: CMakeFiles/PWA.dir/src/Provide_sgG.cpp.o
+bin/PWA: CMakeFiles/PWA.dir/src/Provide_Tx.cpp.o
+bin/PWA: CMakeFiles/PWA.dir/src/Provide_Lx.cpp.o
+bin/PWA: CMakeFiles/PWA.dir/src/Provide_sgOx.cpp.o
+bin/PWA: CMakeFiles/PWA.dir/src/Provide_sgLx.cpp.o
+bin/PWA: CMakeFiles/PWA.dir/src/Provide_Ox.cpp.o
 bin/PWA: CMakeFiles/PWA.dir/build.make
 bin/PWA: CMakeFiles/PWA.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable bin/PWA"
@@ -939,41 +939,41 @@ bin/PWA: CMakeFiles/PWA.dir/link.txt
 CMakeFiles/PWA.dir/build: bin/PWA
 .PHONY : CMakeFiles/PWA.dir/build
 
-CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Provide_E.cpp.o.requires
+CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Provide_Tz.cpp.o.requires
+CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Provide_sg0.cpp.o.requires
+CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Provide_Cz.cpp.o.requires
 CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Provide_Lz.cpp.o.requires
+CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Provide_T.cpp.o.requires
+CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Provide_sgF.cpp.o.requires
+CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Fitter.cpp.o.requires
+CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Provide_Oz.cpp.o.requires
+CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Parse_HELI.cpp.o.requires
+CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/PWA.cpp.o.requires
+CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Provide_sgCx.cpp.o.requires
+CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Provide_sgOz.cpp.o.requires
+CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Provide_E.cpp.o.requires
+CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Provide_sgCz.cpp.o.requires
+CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Provide_S.cpp.o.requires
 CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Provide_sgTz.cpp.o.requires
+CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Provide_sgT.cpp.o.requires
 CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Provide_H.cpp.o.requires
 CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Provide_G.cpp.o.requires
-CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Provide_F.cpp.o.requires
-CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Provide_sgOz.cpp.o.requires
-CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Provide_sgLz.cpp.o.requires
-CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Provide_sgTx.cpp.o.requires
-CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Provide_sgG.cpp.o.requires
-CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Fitter.cpp.o.requires
-CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Provide_sgOx.cpp.o.requires
-CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Provide_sg0.cpp.o.requires
-CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Provide_P.cpp.o.requires
-CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Provide_sgCx.cpp.o.requires
-CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Provide_Oz.cpp.o.requires
-CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/PWA.cpp.o.requires
 CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Provide_sgH.cpp.o.requires
-CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Provide_Cx.cpp.o.requires
-CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Provide_sgCz.cpp.o.requires
-CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Provide_Tx.cpp.o.requires
-CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Provide_T.cpp.o.requires
-CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Provide_Ox.cpp.o.requires
-CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Provide_sgT.cpp.o.requires
-CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Provide_Lx.cpp.o.requires
-CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Parse_MAID.cpp.o.requires
-CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Provide_sgF.cpp.o.requires
+CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Provide_F.cpp.o.requires
 CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Provide_sgP.cpp.o.requires
-CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Provide_Tz.cpp.o.requires
+CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Provide_Cx.cpp.o.requires
+CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Parse_MAID.cpp.o.requires
+CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Provide_sgLz.cpp.o.requires
 CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Provide_sgE.cpp.o.requires
-CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Provide_sgLx.cpp.o.requires
-CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Provide_Cz.cpp.o.requires
+CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Provide_sgTx.cpp.o.requires
 CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Provide_sgS.cpp.o.requires
-CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Provide_S.cpp.o.requires
-CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Parse_HELI.cpp.o.requires
+CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Provide_P.cpp.o.requires
+CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Provide_sgG.cpp.o.requires
+CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Provide_Tx.cpp.o.requires
+CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Provide_Lx.cpp.o.requires
+CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Provide_sgOx.cpp.o.requires
+CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Provide_sgLx.cpp.o.requires
+CMakeFiles/PWA.dir/requires: CMakeFiles/PWA.dir/src/Provide_Ox.cpp.o.requires
 .PHONY : CMakeFiles/PWA.dir/requires
 
 CMakeFiles/PWA.dir/clean:

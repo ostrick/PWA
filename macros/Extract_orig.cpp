@@ -739,6 +739,10 @@ void Chi2(Int_t SOLUTION=0, Double_t MASS_INITIAL=938.2720)
   Chi2GraphW->SetName("Chi2");
   Chi2GraphW->SetTitle("Chi2");
   Chi2GraphW->Draw("APZ");
+
+  sprintf(Buffer, "plots.%d/Chi2.pdf", SOLUTION);
+  Canvas->SaveAs(Buffer);
+
 }
 
 //-----------------------------------------------------------------------------

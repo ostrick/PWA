@@ -664,8 +664,15 @@ void Load()
     if(sscanf(Buffer, "TZ_FILE %s %lf %lf",   Filename, &Weight, &Scale)==3) Load_Tz(Filename, Weight, Scale);
 
     if(sscanf(Buffer, "MODEL_PATH %s", Pathname)==1) Parse_MAID(Pathname);
-    if(sscanf(Buffer, "MODEL_PATH %s", Pathname)==1) Parse_HELI(Pathname);
+    //    if(sscanf(Buffer, "MODEL_PATH %s", Pathname)==1) Parse_HELI("");
   }
+    
+  Char_t heliname[256];
+
+
+  sprintf( heliname, ".");
+    if (PENALTY_MODE == 9) Parse_HELI(heliname);
+
   fclose(Config);
   return;
 

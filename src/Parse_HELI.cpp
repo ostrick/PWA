@@ -5,7 +5,8 @@
 void Parse_HELI(Char_t* Path)
 {
   Char_t Buffer[1024];
-  Double_t Energy, Re, Im,nz,Egamma;
+  Double_t  Re, Im,Egamma;
+  Int_t nz;
   Double_t t, z, ReH1, ImH1, ReH2, ImH2, ReH3, ImH3, ReH4, ImH4;
   FILE* HELI_H1[LBINS];
   FILE* HELI_H2[LBINS];
@@ -15,7 +16,7 @@ void Parse_HELI(Char_t* Path)
   
   EPSILON = 1e38; //Initialize for search
 
-  /* 
+
   printf("------------------------------------------------------------------------------------\n");
   printf("Loading Hedim's helicity aplitudes... ");
 
@@ -27,7 +28,8 @@ void Parse_HELI(Char_t* Path)
    
   while(!feof(HELI))
   {
-    if(fscanf(HELI, "%lf %lf %lf\n", &Energy, &Egamma, &nz)!=3) break;
+    if(fscanf(HELI, "%lf %d \n",  &Egamma, &nz)!=2) break;
+    //   printf("%lf, %lf \n", Egamma, nz);
     heli_nz[heli_bin] = nz;
     for(Int_t i=0; i<nz; i++)
     {
@@ -46,8 +48,8 @@ void Parse_HELI(Char_t* Path)
     heli_bin++;
   }
   
-  */ 
-
+  
+  /*
   printf("------------------------------------------------------------------------------------\n");
   printf("Loading Sven's helicity amplitudes... ");
 
@@ -81,7 +83,8 @@ void Parse_HELI(Char_t* Path)
 
   //Close file
   fclose(HELI);
-
+  */
+  
 }
 //-----------------------------------------------------------------------------
 
